@@ -42,6 +42,8 @@ make && make install
 
 > 注意：Centos 镜像已停止服务，`yum install` 安装 `devel` 软件时，如报错无法安装可尝试将 `/etc/yum.repos.d/` 目录下的 `CentOS-Base.repo.rpmsave` 中的文件内容覆盖至 `CentOS-Linux-BaseOS.repo` ，`CentOS-AppStream.repo.rpmsave` 覆盖至 `CentOS-Linux-AppStream.repo`，操作前请注意备份
 
+其中 `user` 与 `group` 用于指定运行 nginx 的用户，`prefix` 指定安装路径，可根据需要自行修改
+
 ### 3.创建软连接
 
 ```shell
