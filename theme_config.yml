@@ -1,0 +1,65 @@
+menu:
+  Index:
+    url: /
+    External: false
+    name: 首页
+  Tags:
+    url: /tags
+    External: false
+    name: 标签
+  Categories:
+    url: /categories
+    External: false
+    name: 分类
+  Archives:
+    url: /archives
+    External: false
+    name: 归档
+  About:
+    url: /about
+    External: false
+    name: 关于
+
+# 联系方式
+contact:
+  github: "https://github.com/f-dong"
+  twitter:
+  weibo:
+  zhihu:
+  facebook:
+
+# 是否显示封面图片
+showFeatureImage: true
+
+# 首页头像图片
+avatar: /images/avatar.png
+
+# 谷歌统计 跟踪 ID
+ga: "G-2GM6102E19"
+
+# Gittalk 评论组件
+# See: https://github.com/gitalk/gitalk/
+gitalk:
+  enable: true
+  clientId: "eaa8ec37487184406145"
+  clientSecret: "77f9955d0267c1331df7cc706cfa385d2befb9c6"
+  repository: blog
+  owner: f-dong
+
+# 是否使用 bootcdn
+use_bootcdn: true
+
+# 底部链接
+bottom_link:
+  icp:
+    url:
+    text: RSS
+    class: rss
+  rss:
+    url: # beian.miit.gov.cn
+    text: # 沪ICP备 09007032号-1
+    class: icp
+
+# 底部显示来源信息
+bottom_source:
+  enable: true
