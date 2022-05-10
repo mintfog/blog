@@ -2,6 +2,7 @@
 title: Centos 编译安装 Nginx
 date: 2022-04-18 21:18:28
 keywords: Nginx,Nginx 安装,linux,nginx 编译安装,服务器搭建
+summary: Nginx (engine x) 是一个高性能的 HTTP 和反向代理 web 服务器, 同时也提供了 IMAP/POP3/SMTP 服务, Nginx是由伊戈尔·赛索耶夫为俄罗斯访问量第二的Rambler.ru站点（俄文：Рамблер）开发的。
 tags:
 - linux
 - Nginx
@@ -10,7 +11,7 @@ categories: nginx
 
 
 
-Nginx (engine x) 是一个高性能的 HTTP 和反向代理 web 服务器, 同时也提供了 IMAP/POP3/SMTP 服务, Nginx是由伊戈尔·赛索耶夫为俄罗斯访问量第二的Rambler.ru站点（俄文：Рамблер）开发的,。
+Nginx (engine x) 是一个高性能的 HTTP 和反向代理 web 服务器, 同时也提供了 IMAP/POP3/SMTP 服务, Nginx是由伊戈尔·赛索耶夫为俄罗斯访问量第二的Rambler.ru站点（俄文：Рамблер）开发的。
 
 Nginx 官网：[https://nginx.org](https://nginx.org/)
 
