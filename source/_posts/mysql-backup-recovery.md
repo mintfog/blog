@@ -1,7 +1,7 @@
 ---
 title: MySQL 备份恢复策略
 date: 2022-05-08 22:16:05
-keywords: Nginx,Nginx 安装,linux,nginx gzip,gzip
+keywords: mysql,mysql 备份恢复,数据库,数据库数据恢复,mysql闪回,数据恢复,运维,数据闪回
 summary:  数据库在运行过程中，总会遇到各种各样的问题：硬件故障、bug 导致数据损坏、由于服务器宕机或者其他原因造成的数据库不可用。除此以外还有人为操作，如 DELETE 语句忘记加条件、ALTER TABLE 执行错表、DROP TABLE 执行错表、黑客攻击……
 tags:
 - linux
