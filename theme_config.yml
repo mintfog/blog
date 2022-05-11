@@ -47,7 +47,7 @@ gitalk:
   owner: f-dong
 
 # 是否使用 bootcdn
-use_bootcdn: true
+use_bootcdn: false
 
 # 底部链接
 bottom_link:
