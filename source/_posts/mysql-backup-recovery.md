@@ -61,7 +61,7 @@ categories: mysql
 
 ##### 语法：
 
-```shell
+```bash
 mysqldump [OPTIONS] [database] [tables]
 ```
 
@@ -98,7 +98,7 @@ mysqldump [OPTIONS] [database] [tables]
 
 ##### 示例：
 
-```shell
+```bash
 mysqldump --opt -h<host> -u<user> -p<password> <database> > backup.sql
 ```
 
@@ -114,7 +114,7 @@ source backup.sql;
 
 ##### 安装：
 
-```shell
+```bash
 yum install http://www.percona.com/downloads/percona-release/redhat/0.1-6/percona-release-0.1-6.noarch.rpm
 yum update percona-release
 # qpress 用作压缩解压
@@ -123,7 +123,7 @@ yum install percona-xtrabackup-24 qpress
 
 ##### 备份：
 
-```shell
+```bash
 innobackupex --defaults-file=/etc/my.cnf --user=<user> --password=<pwd> <要备份到哪个目录> --no-timestamp --compress --compress-threads=4 --parallel=4
 ```
 
@@ -135,7 +135,7 @@ innobackupex --defaults-file=/etc/my.cnf --user=<user> --password=<pwd> <要备�
 
 ##### 恢复：
 
-```shell
+```bash
 # 1：解压
 innobackupex --decompress <备份文件所在目录> --parallel=4
 
@@ -154,13 +154,13 @@ innobackupex --datadir=<MySQL数据目录> --copy-back <备份文件所在目录
 
 `xtrabackup` 允许进行增量备份，`xtrabackup`的安装前文已经介绍过，增量备份示例如下：
 
-```shell
+```bash
 innobackupex --defaults-file=/etc/my.cnf --user=<user> --password=<pwd> --no-timestamp --compress --incremental --incremental-basedir=<全量备份的目录> <增量备份的目标目录>
 ```
 
 恢复：
 
-```shell
+```bash
 # 1：对全备解压
 innobackupex --decompress <全量备份文件所在目录>
 
@@ -182,13 +182,13 @@ innobackupex --datadir=<MySQL数据目录> --copy-back <全量备份文件所在
 
 #### binlog
 
-使用 `binlog` 做增量备份比较简单，在执行全备的时候增加参数 `--flush-logs` 轮转日志，然后把新的 `binlog` 直接复制到备份目录就可以了。
+使用 `binlog` 做增量备份比较简单，在使用 `mysqldump` 执行全备的时候增加参数 `--flush-logs` 轮转日志，然后把新的 `binlog` 直接复制到备份目录就可以了。
 
 恢复的时候使用 `mysqlbinlog binlog日志文件 > backup.sql`，随后链接数据库使用 `source` 恢复就可以了，注意在恢复前需要过滤掉异常的 sql 语句。
 
 不必担心日志过多占用空间问题，当下最不值钱的就是储存空间，反倒真正需要恢复数据时会有大用，推荐的 binlog 配置为：
 
-```shell
+```bash
 # binlog 存放目录
 log_bin=/www/wwwlogs/mysql/log_bin_data
 # mysql 清除过期日志的时间，默认值 0，不自动清理，而是使用滚动循环的方式。
@@ -203,6 +203,14 @@ log_slave_updates = 1
 binlog_row_image = FULL
 ```
 
+恢复：
+
+```bash
+mysqlbinlog --start-datetime="2022-05-10 21:41:00" --stop-datetime="2022-05-11 21:41:00" mysqlbinlog.000001 | mysql -uroot -p1234
+```
+
+
+
 ## 闪回
 
 `mysql` 闪回(flashback)利用 `binlog` 直接进行回滚，能急速恢复且不用停机。[MyFlash](https://github.com/Meituan-Dianping/MyFlash) 是美团开源的一款闪回操作工具
@@ -215,7 +223,7 @@ binlog_row_image = FULL
 
 安装：
 
-```shell
+```bash
 # 下载文件
 wget https://github.com/Meituan-Dianping/MyFlash/archive/master.zip -O MyFlash.zip
 unzip MyFlash.zip
@@ -226,17 +234,34 @@ cd MyFlash-master
 cd binary
 ```
 
-使用：
+使用示例：
 
-```shell
-flashback --databaseNames=<数据库名> --binlogFileNames=<binlog文件位置> --start-position=<开始位置> --stop-position=<结束位置>
+```bash
+flashback --databaseNames=<数据库名> --binlogFileNames=<binlog文件位置>
 ```
 
 执行后会生成 `binlog_output_base.flashback` 文件，需要用 `mysqlbinlog` 解析出来再使用
 
-```shell
+```bash
 mysqlbinlog -vv binlog_output_base.flashback > sql_text.sql
 ```
+
+语法：
+
+| 参数                    | 说明                                                         |
+| ----------------------- | ------------------------------------------------------------ |
+| --databaseNames         | 要闪回的数据库名称，多个数据库用 `,` 隔开                    |
+| --tableNames            | 要闪回的数据表名称，多个用 `,` 隔开                          |
+| --start-position        | 闪回的起始位置，默认从头开始处回滚<br>需要使用 binlog 分析工具获取，如 binlog2sql 或 mysqlbinlog |
+| --stop-position         | 闪回的终止位置，默认回滚到文件结尾                           |
+| --start-datetime        | 闪回的开始时间（误操作的时间）                               |
+| --stop-datetime         | 闪回的终止时间（误操作的时间）                               |
+| --sqlTypes              | 指定需要回滚的 sql 类型，支持 INSERT、DELETE、UPDATE<br>多个类型使用逗号 `,` 分开 |
+| --maxSplitSize          | 对生成的闪回文件进行切割                                     |
+| --binlogFileNames       | 指定需要回滚的 binlog 文件，多个文件用 `,` 隔开              |
+| --outBinlogFileNameBase | 指定输出的 binlog 前缀，如不指定，则默认为 binlog_output_base |
+| include-gtids           | 指定需要回滚的 gtid，支持 gtid 的单个和范围两种形式          |
+| exclude-gtids           | 指定不需要回滚的 gtid，用法同 include-gtids                  |
 
 ## 总结
 
