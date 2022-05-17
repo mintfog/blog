@@ -30,6 +30,7 @@ cd php-8.1.6
 ```bash
 yum install libxml2 libxml2-devel libsqlite3x-devel openssl bzip2 libcurl-devel libcurl libjpeg libpng freetype gmp libmcrypt libmcrypt-devel readline readline-devel libxslt libxslt-devel zlib zlib-devel glibc glib2 ncurses curl gdbm-devel db4-devel libXpm-devel libX11-devel gd-devel gmp-devel expat-devel xmlrpc-c xmlrpc-c-devel libicu-devel libmcrypt-devel libmemcached-devel -y
 ```
+<br>
 
 > 注意：当前 Centos 官方镜像已停止服务，`yum install` 安装 `devel` 软件时，如报错无法安装可尝试将 `/etc/yum.repos.d/` 目录下的 `CentOS-Base.repo.rpmsave` 中的文件内容覆盖至 `CentOS-Linux-BaseOS.repo` ，`CentOS-AppStream.repo.rpmsave` 覆盖至 `CentOS-Linux-AppStream.repo`，操作前请注意备份
 
@@ -114,7 +115,7 @@ location ~ [^/]\.php(/|$) {
 
 ```php
 <?php
-    
+
 phpinfo();
 ```
 
@@ -132,9 +133,9 @@ phpinfo();
 listen = /tmp/php-cgi-81.sock
 listen.backlog = 8192
 listen.allowed_clients = 127.0.0.1
-; 指定监听文件使用的用户名，一定要设置！！并且 listen 中设置的文件 nginx 必须有读权限，否则会报错
+; 运行 master 进程用户名，一定要设置！！并且 listen 中设置的文件 nginx 必须有读权限，否则会报错
 listen.owner = www
-; 指定监听文件的用户组，参考上一个
+; 运行 master 进程用户名，参考上一个
 listen.group = www
 listen.mode = 0666
 ; worker 进程运行的用户，该用户需要有运行的 PHP 文件的读权限，如涉及文件上传还需要对应目录的写权限
@@ -161,4 +162,129 @@ request_slowlog_timeout = 30
 slowlog = /www/wwwlogs/php/slow.log
 ```
 
-worker 说明：
+随后在 nginx 配置文件，对应的 server 中修改 `fastcgi_pass` 为刚才设置中的 `listen` 对应的路径，注意此文件 nginx 运行用户必须有读权限，否则会报错：
+
+```diff
+ location ~ [^/]\.php(/|$) {
+-    fastcgi_pass   127.0.0.1:9000;
++    fastcgi_pass   unix:/tmp/php81.sock;
+     fastcgi_index  index.php;
+     include        fastcgi.conf;
+ }
+```
+
+> `php-fpm` 即 `php-Fastcgi Process Manager`，`php-fpm` 是 `FastCGI` 的实现，并提供了进程管理的功能。`php-fpm` 进程包含 `master` 进程与 `worker` 进程，一般情况下，`master` 进程只有一个，负责监听端口、调度请求，而 `worder` 进程则有多个，每个进程内部都嵌入了一个 `PHP` 解释器，是 `PHP` 代码真正运行的地方。前文设置中的 `worker` 即 `php-fpm` 的 `worker` 进程数量。
+
+### 开机自启
+
+编辑文件 `/etc/init.d/php-fpm81`，如需多版本兼容文件名后加上当前版本，如这里使用 `php-fpm81`，写入如下内容：
+
+```shell
+#!/bin/bash
+
+# chkconfig: - 51 64
+
+. /etc/init.d/functions
+
+# php-fpm 路径
+exec=/www/server/php81/sbin/php-fpm
+# 锁文件 用于识别当前软件是否在运行
+lock=/var/lock/subsys/php-fpm81
+# 标识 输出信息用 可随意修改
+proc=php-fpm81
+
+function start() {
+    pidofproc $exec > /dev/null
+    [ $? = 0 ] && echo "${proc} 正在运行中" && exit
+    daemon $exec
+    if [ $? = 0 ]; then
+        echo "${proc} 启动成功"
+        rm -f lock
+        touch $lock
+    else
+      echo "${proc} 启动失败 $?"
+    fi
+}
+
+function stop() {
+    pidofproc $exec > /dev/null
+    [ $? != 0 ] && echo "${proc} 未运行" && exit
+    killproc $exec
+    if [[ $? == 0 ]]; then
+        echo "${proc} 停止成功"
+        rm -f $lock
+    else
+      echo "${proc} 停止失败 $?"
+    fi
+}
+
+function reload() {
+    killproc $exec -HUP
+    if [[ $? == 0 ]]; then
+        echo "平滑重启成功"
+    else
+        echo "平滑重启失败 $?"
+    fi
+}
+
+function restart() {
+    stop
+    start
+}
+
+function procStatus() {
+    status $exec > /dev/null
+    if [[ $? == 0 ]]; then
+        echo "${proc} 已启动"
+    else
+        echo "${proc} 未启动"
+    fi
+}
+
+case "$1" in
+  start)
+    start
+    ;;
+  stop)
+    stop
+    ;;
+  reload)
+    reload
+    ;;
+  restart)
+    restart
+    ;;
+  status)
+    procStatus
+    ;;
+  *)
+    echo $"Usage: $0 {start|stop|reload|restart|status}"
+esac
+```
+
+随后添加为开机自启即可，如下：( `php-fpm81` 是上一步自定义得到文件名)
+
+```bash
+# 添加运行权限
+chmod +x /etc/init.d/php-fpm81
+chkconfig --add php-fpm81
+chkconfig php-fpm81 on
+```
+
+手动操作命令如下：
+
+```bash
+# 启动
+/etc/init.d/php-fpm81 start
+# 停止
+/etc/init.d/php-fpm81 stop
+# 平滑重启
+/etc/init.d/php-fpm81 reload
+# 重启
+/etc/init.d/php-fpm81 restart
+# 运行状态
+/etc/init.d/php-fpm81 status
+```
+
+
+
