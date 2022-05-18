@@ -119,7 +119,7 @@ location ~ [^/]\.php(/|$) {
 phpinfo();
 ```
 
-![配置成功截图](https://pic.imgdb.cn/item/6281217c09475431299ffedb.jpg)
+![配置成功截图](http://cdn.codeover.cn/img/6281217c09475431299ffedb.jpg-imageFop)
 
 ### nginx php 多版本共存
 
