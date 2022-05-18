@@ -5,14 +5,14 @@ var htmlclean = require('gulp-htmlclean');
 
 // 压缩html文件
 gulp.task('minify-html', function (done) {
-    return gulp.src('./public/*.html')
+    return gulp.src('./public/**/*.html')
+	    .pipe(htmlclean())
 		.pipe(htmlmin({
             removeComments: true,
             minifyJS: true,
             minifyCSS: true,
             minifyURLs: true,
         }))
-		.pipe(htmlclean())
         .pipe(gulp.dest('./public'));
     done();
 });
