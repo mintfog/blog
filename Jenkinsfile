@@ -28,6 +28,7 @@ pipeline {
           sh 'mv -f theme_config.yml themes/hexo-theme-minimalism/_config.yml'
           sh 'npm install'
           sh 'npm run build'
+		  sh 'mv -f robots.txt public/robots.txt'
           sh 'mv -f favicon.ico public/favicon.ico'
           sh 'cd public && tar -zcvf blog.tar.gz *'
         }
