@@ -64,7 +64,7 @@ vi /etc/fstab
 yum install cmake gcc gcc-c++ perl bison ncurses-devel gcc-toolset-11-gcc gcc-toolset-11-gcc-c++ gcc-toolset-11-binutils libtirpc-devel autoconf -y
 # 编译安装 rpcgen
 wget https://github.com/thkukuk/rpcsvc-proto/releases/download/v1.4.3/rpcsvc-proto-1.4.3.tar.xz
-tar -zxvf rpcsvc-proto-1.4.3.tar.xz
+tar xsf rpcsvc-proto-1.4.3.tar.xz
 cd rpcsvc-proto-1.4.3
 ./configure
 make && make install
@@ -74,7 +74,7 @@ make && make install
 
 ```shell
 cmake -DCMAKE_INSTALL_PREFIX=/www/server/mysql -DMYSQL_DATADIR=/www/server/data -DMYSQL_USER=www -DDEFAULT_CHARSET=utf8mb4 -DDEFAULT_COLLATION=utf8mb4_general_ci -DWITH_DEBUG=0 -DWITH_READLINE=1 -DWITH_EMBEDDED_SERVER=1 -DMYSQL_UNIX_ADDR=/tmp/mysql.sock -DENABLED_LOCAL_INFILE=1 -DFORCE_INSOURCE_BUILD=1 -DWITH_BOOST=boost
-make # 需要相当长的时间，建议放后台运行
+make # 需要相当长的时间，建议放后台运行 nohup make >> /root/make.log &
 make install
 ```
 
