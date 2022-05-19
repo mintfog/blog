@@ -72,7 +72,7 @@ make && make install
 ```
 进入 apache 配置目录 `cd /usr/local/httpd/etc/`，编辑 `httpd.conf`，解除 200 行左右的 `ServerName` 的注释 
 
-![取消注释ServerName](https://pic.imgdb.cn/item/625c27fe239250f7c568334f.jpg)
+![取消注释ServerName](https://cdn.codeover.cn/img/625c27fe239250f7c568334f.jpg-imageFop)
 
 ## Apache 的基础使用
 
@@ -89,12 +89,12 @@ systemctl stop firewalld
 
 将 `httpd.conf` 第 243 行左右的 `AllowOverride None` 修改为 `AllowOverride All`
 
-![修改配置截图](https://pic.imgdb.cn/item/625c2a61239250f7c56de08e.jpg)
+![修改配置截图](https://cdn.codeover.cn/img/625c2a61239250f7c56de08e.jpg-imageFop)
 
 将 `httpd.conf` 第 480 行左右的 `Include etc//extra/httpd-vhosts.conf` 解除注释
 修改 `extra/httpd-vhosts.conf`，文件内容如下
 
-![vhosts内容](https://pic.imgdb.cn/item/625c2c3e239250f7c571bfaa.jpg)
+![vhosts内容](https://cdn.codeover.cn/img/625c2c3e239250f7c571bfaa.jpg-imageFop)
 
 ```apache
 <VirtualHost *:80>

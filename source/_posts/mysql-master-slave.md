@@ -29,7 +29,7 @@ categories: mysql
 4. 从库的 *I/O线程* 获取到主库发送的日志内容(binlog)后，将收到的日志更新到本机的中继日志(relay-log)中，
 5. 从库的 *SQL线程* 检测到 `relay-log` 新增了内容后，将 `relay-log` 中的内容解析为 SQL 语句执行。
 
-<img src="https://pic.imgdb.cn/item/627e68e70947543129af718d.jpg" alt="核心步骤图解" style="zoom:50%;" />
+<img src="https://cdn.codeover.cn/img/627e68e70947543129af718d.jpg-imageFop" alt="核心步骤图解" style="zoom:50%;" />
 
 ## 模型
 
@@ -39,19 +39,19 @@ categories: mysql
 
 一主一从或一主多从是最常见的主从架构，实施起来简单并且有效。一主多从模型适合少量写，大量读的业务场景，可以将读请求分发至各个从节点，可有效地减轻主库的*读压力*
 
-<img src="https://pic.imgdb.cn/item/627e689a0947543129ae4824.jpg" alt="一主多从图解" style="zoom:50%;" />
+<img src="https://cdn.codeover.cn/img/627e689a0947543129ae4824.jpg-imageFop" alt="一主多从图解" style="zoom:50%;" />
 
 ### 多主一从
 
 多主一从可以将多个主库备份到同一从数上，一般情况下不会使用此模型。此模型需要 mysql 版本大于等于 5.7
 
-<img src="https://pic.imgdb.cn/item/627e6c800947543129bccefb.jpg" alt="多主一从图解" style="zoom:50%;" />
+<img src="https://cdn.codeover.cn/img/627e6c800947543129bccefb.jpg-imageFop" alt="多主一从图解" style="zoom:50%;" />
 
 ### 级联复制
 
 主节点如果有太多的从节点，就会损耗相当一部分性能用于复制数据（replication），级联复制就是使部分从节点同时担任主节点的复制（replication）工作，这样不仅仅可以缓解主节点的压力，并且对数据一致性没有影响。
 
-<img src="https://pic.imgdb.cn/item/627e73d80947543129d8c746.jpg" alt="级联复制图解" style="zoom:50%;" />
+<img src="https://cdn.codeover.cn/img/627e73d80947543129d8c746.jpg-imageFop" alt="级联复制图解" style="zoom:50%;" />
 
 ### 主主复制
 
@@ -65,7 +65,7 @@ mysql 主从复制默认是异步模式，mysql 增删改操作会全部记录�
 ### 异步复制
 异步模式（mysql async-mode）下，主库不会主动地向从库推送，而是等待从库的 *I/O线程* 连接建立。主库在执行完自己的的事务之后直接将结果写入 `binlog` ，不会关心从库是否已接收并处理，这种模式下处理请求与主从复制是完全异步的，如果从库在执行复制时挂掉，可能会出现主从数据不一致的现象。
 
-<img src="https://pic.imgdb.cn/item/627fbdce09475431298a8b81.jpg" alt="异步复制流程" style="zoom:36%;" />
+<img src="https://cdn.codeover.cn/img/627fbdce09475431298a8b81.jpg-imageFop" alt="异步复制流程" style="zoom:36%;" />
 
 ### 同步复制
 
@@ -73,7 +73,7 @@ mysql 主从复制默认是异步模式，mysql 增删改操作会全部记录�
 
 指的注意的是，在此模式下，主库会直接提交事务，而不是等待所有从库复制完才提交，此模式只是延迟了对客户端的返回，所以在极端情况下此模式依旧会出现主从数据不一致的情况。
 
-<img src="https://pic.imgdb.cn/item/627fc33109475431299f6bf0.jpg" alt="同步复制流程" style="zoom:36%;" />
+<img src="https://cdn.codeover.cn/img/627fc33109475431299f6bf0.jpg-imageFop" alt="同步复制流程" style="zoom:36%;" />
 
 
 ### 半同步模式

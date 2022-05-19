@@ -19,11 +19,11 @@ mysql-8.0.29源码包：[https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-boo
 ### 获取最新版源码包
 
 1. 进入 mysql 官网，点击 Downloads，然后选择 `MySQL Community (GPL) Downloads »`，如图所示
-![下载截图1](https://wkphoto.cdn.bcebos.com/63d0f703918fa0ec9836de68369759ee3c6ddbe6.jpg)
+![下载截图1](https://cdn.codeover.cn/img/63d0f703918fa0ec9836de68369759ee3c6ddbe6.jpg-imageFop)
 2. 选择  `MySQL Community Server`，如图所示：
-![下载截图2](https://pic.imgdb.cn/item/627136970947543129ff4739.jpg)
+![下载截图2](https://cdn.codeover.cn/img/627136970947543129ff4739.jpg-imageFop)
 3. 分别选择 `Source Code` 与 `All Operating Systems (Generic) (Architecture Independent)`，如图所示：
-![下载截图3](https://pic.imgdb.cn/item/62714a88094754312944b987.jpg)
+![下载截图3](https://cdn.codeover.cn/img/62714a88094754312944b987.jpg-imageFop)
 4. 在新窗口中右键点击 `No thanks, just start my download.` 复制下载链接
 
 ### 下载并解压

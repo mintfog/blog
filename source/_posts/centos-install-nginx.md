@@ -56,7 +56,7 @@ ln -s /usr/local/nginx/sbin/nginx /usr/bin/nginx
 nginx
 ```
 输出如下
-![输出截图](https://pic.imgdb.cn/item/625d6710239250f7c5a8b4ff.jpg)
+![输出截图](https://cdn.codeover.cn/img/625d6710239250f7c5a8b4ff.jpg-imageFop)
 
 ### 5.配置
 1. `worker_processes` 启动进程数，修改为 `auto`

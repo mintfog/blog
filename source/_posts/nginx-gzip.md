@@ -17,7 +17,7 @@ categories: nginx
 
 nginx 在接收到浏览器发出的请求之后，会根据请求信息检查浏览器可以接受哪些压缩方法，详情可见下图。
 
-![过程截图](https://pic.imgdb.cn/item/626ab151239250f7c52e1bde.jpg)
+![过程截图](https://cdn.codeover.cn/img/626ab151239250f7c52e1bde.jpg-imageFop)
 
 浏览器在请求头信息中会追加上上 `Accept-Encoding` 参数来说明自己支持哪些压缩方式。
 
@@ -27,7 +27,7 @@ nginx 在接收到浏览器发出的请求之后，会根据请求信息检查�
 
 压缩前后的体积差异，可以在控制台中看到。对于 js、css 文件的压缩率还是比较可观的。
 
-![压缩率对比](https://pic.imgdb.cn/item/626ab42c239250f7c535a2a8.png)
+![压缩率对比](https://cdn.codeover.cn/img/626ab42c239250f7c535a2a8.png-imageFop)
 
 ## gzip 配置参数
 
