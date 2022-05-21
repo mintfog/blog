@@ -43,12 +43,12 @@ nginx 根据请求中的 `host` 头部与 `server_name` 进行匹配，来进行
 
 ```nginx
 server {
-    listen       80 443;
+    listen       80;
     server_name  *.example.org;
 }
 
 server {
-    listen       80 443;
+    listen       80;
     server_name  abc.*;
 }
 ```
@@ -56,7 +56,7 @@ server {
 ### 正则匹配
 ```nginx
 server {
-    listen       80 443;
+    listen       80;
     server_name  ~^(?<user>.+)\.example\.net$;
 }
 ```
@@ -75,7 +75,7 @@ server {
 ### 精确匹配
 ```nginx
 server {
-    listen       80 443;
+    listen       80;
     server_name  example.org  www.example.org;
 }
 ```

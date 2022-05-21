@@ -59,7 +59,7 @@ http {
     # 压缩级别设置为 2，设置较大数值会消耗较多 cpu 资源
     gzip_comp_level 2;
     # 参与压缩的文件类型 可在配置文件同级的 mime.types 查看并添加 不建议压缩图片文件
-    gzip_types text/plain text/css text/javascript application/json application/javascript application/x-javascript application/xml font/ttf font/otf;
+    gzip_types application/xhtml+xml text/plain text/css text/javascript application/json application/javascript application/x-javascript application/xml font/ttf font/otf;
     gzip_vary on;
 
     ...
