@@ -4,19 +4,19 @@ menu:
     External: false
     name: 首页
   Tags:
-    url: /tags
+    url: /tags/
     External: false
     name: 标签
   Categories:
-    url: /categories
+    url: /categories/
     External: false
     name: 分类
   Archives:
-    url: /archives
+    url: /archives/
     External: false
     name: 归档
   About:
-    url: /about
+    url: /about/
     External: false
     name: 关于
 

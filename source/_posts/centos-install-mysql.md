@@ -1,8 +1,9 @@
 ---
-title: Centos 编译安装 MySQL
+title: Centos 编译安装 MySQL 与基础配置
 date: 2022-05-03 21:38:44
 summary:  MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，目前属于 Oracle 旗下产品。MySQL 最流行的关系型数据库管理系统，在 WEB 应用方面MySQL是最好的 RDBMS (Relational Database Management System，关系数据库管理系统) 应用软件之一。
-keywords: mysql,mysql 安装,linux,服务器搭建,mysql 编译安装
+keywords: mysql,mysql 安装,linux,服务器搭建,mysql 编译安装,mysql配置
+description: CentOS 8 编译安装 MySQL 8.0 编译安装 MySQL-80 本篇文章将采用源代码编译的方式安装mysql数据库，并介绍mysql的基本设置，本篇文章兼容mysql5.7版本与mysql5.6版本，采用源码编译方式安装
 tags:
 - linux
 - mysql
@@ -93,8 +94,27 @@ make install
 
 ### 初始化数据库
 
-如果在编译时自定义了安装路径，需要修改 `/www/server/mysql/` 与 `/www/server/data/` 为对应路径
 
+为了避免第一次启动失败，建议在 mysql 安装目录创建 `my.ini` 并写入如下默认内容，详细配置说明可参考文章底部
+```yaml
+[client]
+port = 3306
+socket = /tmp/mysql.sock
+
+[mysqld]
+server-id = 1
+port = 3306
+# mysql 运行的用户名
+user = www
+# mysql 安装路径
+basedir = /www/server/mysql
+# mysql data存放路径
+datadir = /www/server/data
+tmpdir  = /tmp
+socket  = /tmp/mysql.sock
+```
+
+如果在编译时自定义了安装路径，需要修改 `/www/server/mysql/` 与 `/www/server/data/` 为对应路径
 ```shell
 # 初始化数据库
 /www/server/mysql/bin/mysqld --initialize-insecure
