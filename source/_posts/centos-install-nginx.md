@@ -3,6 +3,7 @@ title: Centos 编译安装 Nginx
 date: 2022-04-18 21:18:28
 keywords: Nginx,Nginx 安装,linux,nginx 编译安装,服务器搭建
 summary: Nginx (engine x) 是一个高性能的 HTTP 和反向代理 web 服务器, 同时也提供了 IMAP/POP3/SMTP 服务, Nginx是由伊戈尔·赛索耶夫为俄罗斯访问量第二的Rambler.ru站点（俄文：Рамблер）开发的。
+description: nginx是非常优秀的web服务器，centos8编译nginx时会遇到各种问题，例如编译参数的指定，源码的下载等，centos7编译安装与基本使用
 tags:
 - linux
 - Nginx
@@ -64,6 +65,7 @@ nginx
 3. 运行 `ulimit -SHn 65535` 修改系统资源限制，并添加至 `/etc/profile` 文件底部
 
 ### 6.常用命令
+
 ```shell
 # 启动
 nginx
@@ -78,3 +80,23 @@ nginx
 # 平滑重启
 nginx -s reload
 ```
+
+### 7. 配置 php
+
+php 是世界上最好的编程语言，如需在 nginx 中使用 php，可参考这盘文章：[https://www.codeover.cn/centos-install-php/](https://www.codeover.cn/centos-install-php/)
+
+### 8. 日志配置
+
+网站访问日志是非常有用的，我们会常用日志查看网站访问情况，以及对网站进行分析，nginx 的日志配置可参考这边文章：[https://www.codeover.cn/nginx-log-config/](https://www.codeover.cn/nginx-log-config/)
+
+### 9. 负载均衡
+
+在网站压力日益增加后，我们会引入负载均衡来分散服务压力，nginx 的负载均衡配置可查看这篇文章：https://www.codeover.cn/nginx-balancing/
+
+### 10. 虚拟网站配置
+
+我们的服务器想要运行网站，都需要在 nginx 中注册，即配置 nginx web server，在 nginx web server 配置中，每个 server 都对应了一个网站，且相互独立，具体配置方式可参考本文：https://www.codeover.cn/nginx-server-config/
+
+### 11. gzip 压缩
+
+为提高网页加载速度，启用 `gzip` 缩减资源的大小是非常常见的手段。现代浏览器基本均支持 `gzip` 压缩，并会为HTTP请求自动协商此类压缩。gzip 的具体配置方法可参考此文章：https://www.codeover.cn/nginx-gzip/

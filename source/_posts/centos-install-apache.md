@@ -2,6 +2,7 @@
 title: Centos 编译安装 Apache
 date: 2022-04-16 22:08:04
 summary:  Apache(音译为阿帕奇)是世界使用排名第一的Web服务器软件。它可以运行在几乎所有广泛使用的计算机平台上，由于其跨平台和安全性被广泛使用，是最流行的Web服务器端软件之一。
+description: 本文介绍centos下如何编译安装apache，centos8安装Apache，同时centos7也可，通过编译源代码方式安装，同时编译安装依赖apr和apr-util，并进行简单配置。
 keywords: Apache,Apache安装,linux,Apache 编译安装,服务器搭建
 tags:
 - linux
@@ -74,7 +75,7 @@ make && make install
 
 ![取消注释ServerName](https://cdn.codeover.cn/img/625c27fe239250f7c568334f.jpg-imageFop)
 
-## Apache 的基础使用
+## xxxxxxxxxx # 启动nginx​# 停止nginx -s stop​# 重启nginx -s quitnginx​# 平滑重启nginx -s reloadshell
 
 ### 启动
 

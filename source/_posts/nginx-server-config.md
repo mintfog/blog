@@ -3,6 +3,7 @@ title: Nginx web server 配置
 date: 2022-04-26 20:23:30
 summary:  添加虚拟服务器Nginx配置文件中至少包含一条定义虚拟服务器的server指令。当Nginx处理一个请求时，第一个被选中的虚拟服务器将用于处理该请求。
 keywords: Nginx,Nginx server配置,linux,服务器搭建,反向代理
+description: nginx web server就是虚拟网站配置，每个server都对应了一个网站，本文介绍了如何配置nginx web server, 以及反向代理的配置等，从语法与示例讲解。
 tags:
 - linux
 - Nginx

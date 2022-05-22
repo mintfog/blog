@@ -103,11 +103,6 @@ theme: hexo-theme-minimalism
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
-  
-# 中文转拼音
-permalink_pinyin:
-enable: true
-separator: '-' # default: '-'
 
 # emoji 表情
 githubEmojis:
