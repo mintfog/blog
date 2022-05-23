@@ -126,3 +126,10 @@ feed:
   content_limit: 160
   content_limit_delim: ' '
   order_by: -date
+
+sitemap:
+  path: 
+    - sitemap.xml
+    - sitemap.txt
+  template: ./sitemap_template.xml
+  rel: true
