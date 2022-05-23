@@ -1,6 +1,6 @@
 ---
 title: Centos 编译安装 memcached 以及基础配置
-date: 2022-05-20 23:15:52
+date: 2022-05-22 23:15:52
 summary:  memcached是一套分散式的高速缓冲记忆体系统，由LiveJournal的Brad Fitzpatrick开发，但目前被许多网站使用。这是一套开放原始码软体，以BSD license授权释出。
 keywords: memcached,memcached 安装,linux,服务器搭建,memcached 编译安装,memcached配置,php配置memcached
 description: CentOS8编译安装memcached CentOS7编译安装 memcached linux编译安装memcached 本篇文章将采用源代码编译的方式安装memcached数据库，并介绍memcached的基本设置，以及 php 扩展的安装，采用源码编译方式安装，并配置开机启动脚本。
