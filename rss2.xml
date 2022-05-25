@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>codeover</title>
+    <link>https://www.codeover.cn/</link>
+    
+    <atom:link href="https://www.codeover.cn/rss2.xml" rel="self" type="application/rss+xml"/>
+    
+    <description>董飞祥个人博客网站，此个人博客是一个专注于IT技术学习交流的个人技术博客网站，包括敏捷开发、网站开发、服务器运维等领域，创建该个人博客也是为了方便与志同道合的朋友一起互相学习交流，分享经验，感谢大家的支持。</description>
+    <pubDate>Sun, 22 May 2022 23:15:52 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Centos 编译安装 memcached 以及基础配置</title>
+      <link>https://www.codeover.cn/centos_install_memcached/</link>
+      <guid>https://www.codeover.cn/centos_install_memcached/</guid>
+      <pubDate>Sun, 22 May 2022 23:15:52 GMT</pubDate>
+      
+      <description>CentOS8编译安装memcached CentOS7编译安装 memcached linux编译安装memcached 本篇文章将采用源代码编译的方式安装memcached数据库，并介绍memcached的基本设置，以及 php 扩展的安装，采用源码编译方式安装，并配置开机启动脚本。</description>
+      
+      
+      
+      
+      <category domain="https://www.codeover.cn/categories/linux/">linux</category>
+      
+      
+      <category domain="https://www.codeover.cn/tags/linux/">linux</category>
+      
+      
+      <comments>https://www.codeover.cn/centos_install_memcached/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Centos 编译安装 php 与配置</title>
+      <link>https://www.codeover.cn/centos-install-php/</link>
+      <guid>https://www.codeover.cn/centos-install-php/</guid>
+      <pubDate>Sun, 15 May 2022 21:20:28 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;PHP（全称：PHP：Hypertext</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://www.codeover.cn/categories/linux/">linux</category>
+      
+      
+      <category domain="https://www.codeover.cn/tags/linux/">linux</category>
+      
+      <category domain="https://www.codeover.cn/tags/php/">php</category>
+      
+      
+      <comments>https://www.codeover.cn/centos-install-php/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>MySQL 主从复制实现原理</title>
+      <link>https://www.codeover.cn/mysql-master-slave/</link>
+      <guid>https://www.codeover.cn/mysql-master-slave/</guid>
+      <pubDate>Thu, 12 May 2022 21:43:03 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;通过主从复制功能，创建一个或者多个从库，可以有效提高数据库的可用性、可扩展性。当主库发生故障时，可以快速将某一个从库切换为主库使用而不影响正常业务；随着系统中业务访问量的增大，可以把读请求的负载分布到各个从库上，写请求则转发给主库，形成读写分离的架构，来提供更好的读扩展和请求的负载均衡。&lt;/p&gt;
+&lt;h2</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://www.codeover.cn/categories/mysql/">mysql</category>
+      
+      
+      <category domain="https://www.codeover.cn/tags/linux/">linux</category>
+      
+      <category domain="https://www.codeover.cn/tags/mysql/">mysql</category>
+      
+      
+      <comments>https://www.codeover.cn/mysql-master-slave/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>MySQL 备份恢复策略</title>
+      <link>https://www.codeover.cn/mysql-backup-recovery/</link>
+      <guid>https://www.codeover.cn/mysql-backup-recovery/</guid>
+      <pubDate>Sun, 08 May 2022 22:16:05 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;数据库在运行过程中，总会遇到各种各样的问题：硬件故障、&lt;code&gt;bug&lt;/code&gt; 导致数据损坏、由于服务器宕机或者其他原因造成的数据库不可用。除此以外还有人为操作如 &lt;code&gt;DELETE&lt;/code&gt; 语句忘加条件、&lt;code&gt;ALTER TABLE&lt;/code&gt; 执行错表、&lt;code&gt;DROP</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://www.codeover.cn/categories/mysql/">mysql</category>
+      
+      
+      <category domain="https://www.codeover.cn/tags/linux/">linux</category>
+      
+      <category domain="https://www.codeover.cn/tags/mysql/">mysql</category>
+      
+      
+      <comments>https://www.codeover.cn/mysql-backup-recovery/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>微信小程序编译，获取小程序源代码</title>
+      <link>https://www.codeover.cn/weichat-mini-decompilation/</link>
+      <guid>https://www.codeover.cn/weichat-mini-decompilation/</guid>
+      <pubDate>Fri, 06 May 2022 17:05:26 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;刚度过了愉快又短暂的五一小长假，开工第一天，直接就被封印在家了&lt;span class=&quot;github-emoji&quot;&gt;&lt;span&gt;😅&lt;/span&gt;&lt;img src=&quot;https://github.githubassets.com/images/icons/emoji/unicode/1f605.png?v8&quot;</description>
+          
+        
+      
+      
+      
+      
+      
+      
+      <comments>https://www.codeover.cn/weichat-mini-decompilation/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Centos 编译安装 MySQL 与基础配置</title>
+      <link>https://www.codeover.cn/centos-install-mysql/</link>
+      <guid>https://www.codeover.cn/centos-install-mysql/</guid>
+      <pubDate>Tue, 03 May 2022 21:38:44 GMT</pubDate>
+      
+      <description>CentOS 8 编译安装 MySQL 8.0 编译安装 MySQL-80 本篇文章将采用源代码编译的方式安装mysql数据库，并介绍mysql的基本设置，本篇文章兼容mysql5.7版本与mysql5.6版本，采用源码编译方式安装</description>
+      
+      
+      
+      
+      <category domain="https://www.codeover.cn/categories/mysql/">mysql</category>
+      
+      
+      <category domain="https://www.codeover.cn/tags/linux/">linux</category>
+      
+      <category domain="https://www.codeover.cn/tags/mysql/">mysql</category>
+      
+      
+      <comments>https://www.codeover.cn/centos-install-mysql/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Nginx 负载均衡配置</title>
+      <link>https://www.codeover.cn/nginx-balancing/</link>
+      <guid>https://www.codeover.cn/nginx-balancing/</guid>
+      <pubDate>Tue, 03 May 2022 17:11:20 GMT</pubDate>
+      
+      <description>服务器压力过大时，我们会引入负载均衡，以便将请求压力分散于各个服务器，已提供服务稳定性，本文介绍nginx如何配置负载均衡，以及负载均衡常见的算法。</description>
+      
+      
+      
+      
+      <category domain="https://www.codeover.cn/categories/nginx/">nginx</category>
+      
+      
+      <category domain="https://www.codeover.cn/tags/linux/">linux</category>
+      
+      <category domain="https://www.codeover.cn/tags/Nginx/">Nginx</category>
+      
+      
+      <comments>https://www.codeover.cn/nginx-balancing/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>nginx 使用 gzip 压缩静态资源</title>
+      <link>https://www.codeover.cn/nginx-gzip/</link>
+      <guid>https://www.codeover.cn/nginx-gzip/</guid>
+      <pubDate>Fri, 29 Apr 2022 22:18:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;为提高网页加载速度，启用 &lt;code&gt;gzip&lt;/code&gt; 缩减资源的大小是非常常见的手段。现代浏览器基本均支持 &lt;code&gt;gzip&lt;/code&gt; 压缩，并会为HTTP请求自动协商此类压缩。&lt;/p&gt;
+&lt;h2 id=&quot;处理过程&quot;&gt;&lt;a href=&quot;#处理过程&quot; class=&quot;headerlink&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://www.codeover.cn/categories/nginx/">nginx</category>
+      
+      
+      <category domain="https://www.codeover.cn/tags/linux/">linux</category>
+      
+      <category domain="https://www.codeover.cn/tags/Nginx/">Nginx</category>
+      
+      
+      <comments>https://www.codeover.cn/nginx-gzip/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Nginx web server 配置</title>
+      <link>https://www.codeover.cn/nginx-server-config/</link>
+      <guid>https://www.codeover.cn/nginx-server-config/</guid>
+      <pubDate>Tue, 26 Apr 2022 20:23:30 GMT</pubDate>
+      
+      <description>nginx web server就是虚拟网站配置，每个server都对应了一个网站，本文介绍了如何配置nginx web server, 以及反向代理的配置等，从语法与示例讲解。</description>
+      
+      
+      
+      
+      <category domain="https://www.codeover.cn/categories/nginx/">nginx</category>
+      
+      
+      <category domain="https://www.codeover.cn/tags/linux/">linux</category>
+      
+      <category domain="https://www.codeover.cn/tags/Nginx/">Nginx</category>
+      
+      
+      <comments>https://www.codeover.cn/nginx-server-config/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Nginx 日志配置</title>
+      <link>https://www.codeover.cn/nginx-log-config/</link>
+      <guid>https://www.codeover.cn/nginx-log-config/</guid>
+      <pubDate>Wed, 20 Apr 2022 22:09:38 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h2 id=&quot;设置-access-log&quot;&gt;&lt;a href=&quot;#设置-access-log&quot; class=&quot;headerlink&quot; title=&quot;设置 access_log&quot;&gt;&lt;/a&gt;设置 access_log&lt;/h2&gt;&lt;h3 id=&quot;access-log-语法&quot;&gt;&lt;a href=&quot;#access-log-语法&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://www.codeover.cn/categories/nginx/">nginx</category>
+      
+      
+      <category domain="https://www.codeover.cn/tags/linux/">linux</category>
+      
+      <category domain="https://www.codeover.cn/tags/Nginx/">Nginx</category>
+      
+      
+      <comments>https://www.codeover.cn/nginx-log-config/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Centos 编译安装 Nginx</title>
+      <link>https://www.codeover.cn/centos-install-nginx/</link>
+      <guid>https://www.codeover.cn/centos-install-nginx/</guid>
+      <pubDate>Mon, 18 Apr 2022 21:18:28 GMT</pubDate>
+      
+      <description>nginx是非常优秀的web服务器，centos8编译nginx时会遇到各种问题，例如编译参数的指定，源码的下载等，centos7编译安装与基本使用</description>
+      
+      
+      
+      
+      <category domain="https://www.codeover.cn/categories/nginx/">nginx</category>
+      
+      
+      <category domain="https://www.codeover.cn/tags/linux/">linux</category>
+      
+      <category domain="https://www.codeover.cn/tags/Nginx/">Nginx</category>
+      
+      
+      <comments>https://www.codeover.cn/centos-install-nginx/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Centos 编译安装 Apache</title>
+      <link>https://www.codeover.cn/centos-install-apache/</link>
+      <guid>https://www.codeover.cn/centos-install-apache/</guid>
+      <pubDate>Sat, 16 Apr 2022 22:08:04 GMT</pubDate>
+      
+      <description>本文介绍centos下如何编译安装apache，centos8安装Apache，同时centos7也可，通过编译源代码方式安装，同时编译安装依赖apr和apr-util，并进行简单配置。</description>
+      
+      
+      
+      
+      <category domain="https://www.codeover.cn/categories/linux/">linux</category>
+      
+      
+      <category domain="https://www.codeover.cn/tags/linux/">linux</category>
+      
+      <category domain="https://www.codeover.cn/tags/Apache/">Apache</category>
+      
+      
+      <comments>https://www.codeover.cn/centos-install-apache/#disqus_thread</comments>
+      
+    </item>
+    
+  </channel>
+</rss>
