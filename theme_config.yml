@@ -45,6 +45,7 @@ gitalk:
   clientSecret: "77f9955d0267c1331df7cc706cfa385d2befb9c6"
   repository: blog
   owner: f-dong
+  createIssueManually: true
 
 # 是否使用 bootcdn
 use_bootcdn: false
