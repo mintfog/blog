@@ -1,8 +1,8 @@
 :root {
-  --c-base-black: #0C1E29;
-  --c-base-blacklight: #4E616C;
-  --c-base-purple: #5978F3;
-  --c-base-purplelight: #C2CCF2;
+  --c-base-black: #0c1e29;
+  --c-base-blacklight: #4e616c;
+  --c-base-purple: #5978f3;
+  --c-base-purplelight: #c2ccf2;
   --c-base-bluelight: hwb(199, 1%, 4%);
   --c-base-blue: hwb(209, 0%, 35%);
   --c-base-green: hwb(123, 40%, 27%);
@@ -13,12 +13,7 @@
   --c-base-white: hwb(0, 95%, 5%);
   --c-base-yellow: hwb(48, 6%, 5%);
 }
-/*! modern-normalize | MIT License | https://github.com/sindresorhus/modern-normalize */
-/* Document
-   ========================================================================== */
-/**
- * Use a better box model (opinionated).
- */
+/* modern-normalize | MIT License | https://github.com/sindresorhus/modern-normalize */
 html {
   box-sizing: border-box;
 }
@@ -29,83 +24,41 @@ html {
   margin: 0;
   padding: 0;
 }
-/**
- * Use a more readable tab size (opinionated).
- */
 :root {
   -moz-tab-size: 4;
   tab-size: 4;
 }
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
 html {
-  line-height: 1.15;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
-/* Sections
-   ========================================================================== */
-/**
- * Remove the margin in all browsers.
- */
 body {
   margin: 0;
   font-size: 16px;
 }
-/**
- * Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
- */
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
-/* Grouping content
-   ========================================================================== */
-/**
- * Add the correct height in Firefox.
- */
 hr {
   height: 0;
 }
-/* Text-level semantics
-   ========================================================================== */
-/**
- * Add the correct text decoration in Chrome, Edge, and Safari.
- */
 abbr[title] {
   text-decoration: underline dotted;
 }
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
 b,
 strong {
   font-weight: bolder;
 }
-/**
- * 1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
- * 2. Correct the odd `em` font sizing in all browsers.
- */
 code,
 kbd,
 samp,
 pre {
-  font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
-/**
- * Add the correct font size in all browsers.
- */
 small {
   font-size: 80%;
 }
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in all browsers.
- */
 sub,
 sup {
   font-size: 75%;
@@ -119,47 +72,27 @@ sub {
 sup {
   top: -0.5em;
 }
-/* Forms
-   ========================================================================== */
-/**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */
 button,
 input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
-  margin: 0;
-  /* 2 */
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
 }
-/**
- * Remove the inheritance of text transform in Edge and Firefox.
- * 1. Remove the inheritance of text transform in Firefox.
- */
 button,
 select {
-  /* 1 */
+/* 1 */
   text-transform: none;
 }
-/**
- * Correct the inability to style clickable types in iOS and Safari.
- */
 button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
   -webkit-appearance: button;
 }
-/**
- * Remove the inner border and padding in Firefox.
- */
 button::-moz-focus-inner,
 [type='button']::-moz-focus-inner,
 [type='reset']::-moz-focus-inner,
@@ -167,71 +100,36 @@ button::-moz-focus-inner,
   border-style: none;
   padding: 0;
 }
-/**
- * Restore the focus styles unset by the previous rule.
- */
 button:-moz-focusring,
 [type='button']:-moz-focusring,
 [type='reset']:-moz-focusring,
 [type='submit']:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
-/**
- * Correct the padding in Firefox.
- */
 fieldset {
   padding: 0.35em 0.75em 0.625em;
 }
-/**
- * Remove the padding so developers are not caught out when they zero out `fieldset` elements in all browsers.
- */
 legend {
   padding: 0;
 }
-/**
- * Add the correct vertical alignment in Chrome and Firefox.
- */
 progress {
   vertical-align: baseline;
 }
-/**
- * Correct the cursor style of increment and decrement buttons in Safari.
- */
 [type='number']::-webkit-inner-spin-button,
 [type='number']::-webkit-outer-spin-button {
   height: auto;
 }
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
 [type='search'] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
 }
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
 [type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
 }
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
 }
-/* Interactive
-   ========================================================================== */
-/*
- * Add the correct display in Chrome and Safari.
- */
 summary {
   display: list-item;
 }
@@ -312,16 +210,19 @@ summary {
 .strong {
   font-weight: bold;
 }
+/* PrismJS 1.28.0
+https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript */
+code[class*=language-],pre[class*=language-]{color:#ccc;background:0 0;font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}
 @font-face {
   font-family: 'icomoon';
-  src: url('../fonts/icomoon.eot?pjaj8c');
-  src: url('../fonts/icomoon.eot?pjaj8c#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?pjaj8c') format('truetype'), url('../fonts/icomoon.woff?pjaj8c') format('woff'), url('../fonts/icomoon.svg?pjaj8c#icomoon') format('svg');
+  src: url("../fonts/icomoon.eot?pjaj8c");
+  src: url("../fonts/icomoon.eot?pjaj8c#iefix") format('embedded-opentype'), url("../fonts/icomoon.ttf?pjaj8c") format('truetype'), url("../fonts/icomoon.woff?pjaj8c") format('woff'), url("../fonts/icomoon.svg?pjaj8c#icomoon") format('svg');
   font-weight: normal;
   font-style: normal;
 }
 [class^="icon-"],
 [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
+/* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: none;
   font-style: normal;
@@ -329,7 +230,7 @@ summary {
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  /* Better Font Rendering =========== */
+/* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -1171,7 +1072,7 @@ a:active,
 }
 a.purple-link {
   position: relative;
-  background: linear-gradient(180deg, transparent 70%, rgba(101, 125, 225, 0.4) 0);
+  background: linear-gradient(180deg, transparent 70%, rgba(101,125,225,0.4) 0);
 }
 .main {
   max-width: 768px;
@@ -1196,14 +1097,15 @@ a.purple-link {
 }
 .post-item .content .post-title {
   font-size: 22px;
-  color: #0C1E29;
+  color: #0c1e29;
   display: inline-block;
 }
 .post-item .content .post-abstract {
   font-size: 14px;
   margin: 12px 0 8px;
   flex: 1;
-  color: #4E616C;
+  color: #4e616c;
+  overflow: hidden;
   line-height: 24px;
   position: relative;
   display: -webkit-box;
@@ -1216,12 +1118,12 @@ a.purple-link {
 }
 .post-item .content .post-abstract a {
   font-weight: 600;
-  background: linear-gradient(180deg, transparent 70%, rgba(101, 125, 225, 0.4) 0);
+  background: linear-gradient(180deg, transparent 70%, rgba(101,125,225,0.4) 0);
 }
 .post-item .content .post-abstract code {
   padding: 0 3px;
   margin: 0 2px;
-  background: rgba(195, 195, 195, 0.41);
+  background: rgba(195,195,195,0.41);
   font-size: 0.9em;
   border-radius: 2px;
 }
@@ -1287,7 +1189,7 @@ nav {
   display: flex;
   align-items: center;
   padding: 2px 8px;
-  background: linear-gradient(180deg, transparent 70%, rgba(101, 125, 225, 0.4) 0);
+  background: linear-gradient(180deg, transparent 70%, rgba(101,125,225,0.4) 0);
 }
 .pagination-container .prev {
   float: left;
@@ -1331,7 +1233,7 @@ nav {
 .post-content h5,
 .post-content h6 {
   padding: 16px 0;
-  color: #0C1E29;
+  color: #0c1e29;
 }
 .post-content a {
   color: #0e78db;
@@ -1370,7 +1272,7 @@ nav {
   padding: 0.16rem 0.5rem;
   margin: 0.25rem 0;
   font-size: 0.85em;
-  background-color: rgba(27, 31, 35, 0.05);
+  background-color: rgba(27,31,35,0.05);
   border-radius: 3px;
   display: inline-block;
 }
@@ -1486,7 +1388,7 @@ nav {
     font-size: 0.9em;
   }
   .top-box li a.current {
-    color: #006CFF;
+    color: #006cff;
     background: #fafafa;
   }
   .top-box li a:hover {
@@ -1582,104 +1484,6 @@ nav {
   font-size: 14px;
   font-weight: bold;
   color: #ccc;
-}
-/* PrismJS 1.28.0
-https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript */
-code[class*=language-],
-pre[class*=language-] {
-  color: #ccc;
-  background: 0 0;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  font-size: 1em;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  line-height: 1.5;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-}
-pre[class*=language-] {
-  padding: 1em;
-  margin: 0.5em 0;
-  overflow: auto;
-}
-:not(pre) > code[class*=language-],
-pre[class*=language-] {
-  background: #2d2d2d;
-}
-:not(pre) > code[class*=language-] {
-  padding: 0.1em;
-  border-radius: 0.3em;
-  white-space: normal;
-}
-.token.block-comment,
-.token.cdata,
-.token.comment,
-.token.doctype,
-.token.prolog {
-  color: #999;
-}
-.token.punctuation {
-  color: #ccc;
-}
-.token.attr-name,
-.token.deleted,
-.token.namespace,
-.token.tag {
-  color: #e2777a;
-}
-.token.function-name {
-  color: #6196cc;
-}
-.token.boolean,
-.token.function,
-.token.number {
-  color: #f08d49;
-}
-.token.class-name,
-.token.constant,
-.token.property,
-.token.symbol {
-  color: #f8c555;
-}
-.token.atrule,
-.token.builtin,
-.token.important,
-.token.keyword,
-.token.selector {
-  color: #cc99cd;
-}
-.token.attr-value,
-.token.char,
-.token.regex,
-.token.string,
-.token.variable {
-  color: #7ec699;
-}
-.token.entity,
-.token.operator,
-.token.url {
-  color: #67cdcc;
-}
-.token.bold,
-.token.important {
-  font-weight: 700;
-}
-.token.italic {
-  font-style: italic;
-}
-.token.entity {
-  cursor: help;
-}
-.token.inserted {
-  color: green;
 }
 pre[class*=language-] {
   padding: 0;

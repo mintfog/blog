@@ -6,7 +6,7 @@
   <link href="https://www.codeover.cn/atom.xml" rel="self"/>
   
   <link href="https://www.codeover.cn/"/>
-  <updated>2022-05-22T23:15:52.000Z</updated>
+  <updated>2022-05-26T22:16:00.000Z</updated>
   <id>https://www.codeover.cn/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Centos 编译安装 redis 以及基础配置</title>
+    <link href="https://www.codeover.cn/centos-install-redis/"/>
+    <id>https://www.codeover.cn/centos-install-redis/</id>
+    <published>2022-05-26T22:16:00.000Z</published>
+    <updated>2022-05-26T22:16:00.000Z</updated>
+    
+    
+    <summary type="html">CentOS8编译安装redis7 CentOS7编译安装linux编译安装，本篇文章将采用源代码编译的方式安装redis数据库，并介绍redis的基本设置，以及 php 扩展的安装，采用源码编译方式安装,phpize</summary>
+    
+    
+    
+    <category term="redis" scheme="https://www.codeover.cn/categories/redis/"/>
+    
+    
+    <category term="linux" scheme="https://www.codeover.cn/tags/linux/"/>
+    
+    <category term="redis" scheme="https://www.codeover.cn/tags/redis/"/>
+    
+  </entry>
   
   <entry>
     <title>Centos 编译安装 memcached 以及基础配置</title>
@@ -118,11 +139,11 @@
   </entry>
   
   <entry>
-    <title>微信小程序编译，获取小程序源代码</title>
+    <title>微信小程序反编译，获取小程序源代码</title>
     <link href="https://www.codeover.cn/weichat-mini-decompilation/"/>
     <id>https://www.codeover.cn/weichat-mini-decompilation/</id>
     <published>2022-05-06T17:05:26.000Z</published>
-    <updated>2022-05-06T17:05:26.000Z</updated>
+    <updated>2022-05-26T21:36:00.000Z</updated>
     
     
       

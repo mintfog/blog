@@ -9,8 +9,31 @@
     <atom:link href="https://www.codeover.cn/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>董飞祥个人博客网站，此个人博客是一个专注于IT技术学习交流的个人技术博客网站，包括敏捷开发、网站开发、服务器运维等领域，创建该个人博客也是为了方便与志同道合的朋友一起互相学习交流，分享经验，感谢大家的支持。</description>
-    <pubDate>Sun, 22 May 2022 23:15:52 GMT</pubDate>
+    <pubDate>Thu, 26 May 2022 22:16:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Centos 编译安装 redis 以及基础配置</title>
+      <link>https://www.codeover.cn/centos-install-redis/</link>
+      <guid>https://www.codeover.cn/centos-install-redis/</guid>
+      <pubDate>Thu, 26 May 2022 22:16:00 GMT</pubDate>
+      
+      <description>CentOS8编译安装redis7 CentOS7编译安装linux编译安装，本篇文章将采用源代码编译的方式安装redis数据库，并介绍redis的基本设置，以及 php 扩展的安装，采用源码编译方式安装,phpize</description>
+      
+      
+      
+      
+      <category domain="https://www.codeover.cn/categories/redis/">redis</category>
+      
+      
+      <category domain="https://www.codeover.cn/tags/linux/">linux</category>
+      
+      <category domain="https://www.codeover.cn/tags/redis/">redis</category>
+      
+      
+      <comments>https://www.codeover.cn/centos-install-redis/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Centos 编译安装 memcached 以及基础配置</title>
@@ -122,7 +145,7 @@
     </item>
     
     <item>
-      <title>微信小程序编译，获取小程序源代码</title>
+      <title>微信小程序反编译，获取小程序源代码</title>
       <link>https://www.codeover.cn/weichat-mini-decompilation/</link>
       <guid>https://www.codeover.cn/weichat-mini-decompilation/</guid>
       <pubDate>Fri, 06 May 2022 17:05:26 GMT</pubDate>

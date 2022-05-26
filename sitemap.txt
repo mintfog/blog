@@ -2,6 +2,7 @@ https://www.codeover.cn/centos-install-apache/
 https://www.codeover.cn/centos-install-mysql/
 https://www.codeover.cn/centos-install-nginx/
 https://www.codeover.cn/centos-install-php/
+https://www.codeover.cn/centos-install-redis/
 https://www.codeover.cn/centos_install_memcached/
 https://www.codeover.cn/mysql-backup-recovery/
 https://www.codeover.cn/mysql-master-slave/
@@ -19,6 +20,8 @@ https://www.codeover.cn/tags/Apache/
 https://www.codeover.cn/tags/mysql/
 https://www.codeover.cn/tags/Nginx/
 https://www.codeover.cn/tags/php/
+https://www.codeover.cn/tags/redis/
 https://www.codeover.cn/categories/linux/
 https://www.codeover.cn/categories/mysql/
 https://www.codeover.cn/categories/nginx/
+https://www.codeover.cn/categories/redis/
