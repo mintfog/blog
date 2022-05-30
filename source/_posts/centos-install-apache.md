@@ -8,6 +8,7 @@ tags:
 - linux
 - Apache
 categories: linux
+updated: 2022-05-30 23:45:20
 ---
 
 
@@ -75,7 +76,7 @@ make && make install
 
 ![取消注释ServerName](https://cdn.codeover.cn/img/625c27fe239250f7c568334f.jpg-imageFop)
 
-## xxxxxxxxxx # 启动nginx​# 停止nginx -s stop​# 重启nginx -s quitnginx​# 平滑重启nginx -s reloadshell
+## 测试
 
 ### 启动
 
