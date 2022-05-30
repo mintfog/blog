@@ -9,8 +9,29 @@
     <atom:link href="https://www.codeover.cn/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>董飞祥个人博客网站，此个人博客是一个专注于IT技术学习交流的个人技术博客网站，包括敏捷开发、网站开发、服务器运维等领域，创建该个人博客也是为了方便与志同道合的朋友一起互相学习交流，分享经验，感谢大家的支持。</description>
-    <pubDate>Thu, 26 May 2022 22:16:00 GMT</pubDate>
+    <pubDate>Mon, 30 May 2022 21:40:52 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>linux 安装 vsftpd 服务以及配置全攻略</title>
+      <link>https://www.codeover.cn/linux-ftp-config/</link>
+      <guid>https://www.codeover.cn/linux-ftp-config/</guid>
+      <pubDate>Mon, 30 May 2022 21:40:52 GMT</pubDate>
+      
+      <description>CentOS8安装vsftpd CentOS7安装 FTP服务器的配置 linux编译安装，本篇文章主要介绍vsftpd的安装与配置，FTP是常用的文件传输协议，yum方式安装</description>
+      
+      
+      
+      
+      <category domain="https://www.codeover.cn/categories/linux/">linux</category>
+      
+      
+      <category domain="https://www.codeover.cn/tags/linux/">linux</category>
+      
+      
+      <comments>https://www.codeover.cn/linux-ftp-config/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Centos 编译安装 redis 以及基础配置</title>
