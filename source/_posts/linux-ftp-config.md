@@ -7,6 +7,7 @@ description: CentOS8安装vsftpd CentOS7安装 FTP服务器的配置 linux编译
 tags:
 - linux
 categories: linux
+updated: 2022-06-01 21:49:30
 ---
 
 FTP 是 File Transfer Protocol 的简称，用于 Internet 上的控制文件的双向传输。同时，他也是一个应用程序，基于不同的操作系统有不同的 FTP 应用程序，而所有这些应用程序都遵守同一协议传输文件。在 FTP 的使用当中，用户经常遇到两个概念：上传和下载，下载文件就是从远程主机拷贝文件到自己的计算机上，上传文件是指将自己计算机中的文件拷贝至远程主机上。FTP 常用于开发阶段文件上传工具，常用的客户端软件有 [filezilla](https://filezilla-project.org/)、[flashfxp](https://www.flashfxp.com/)、[winscp](https://winscp.net/eng/download.php)、[xftp](https://www.xshell.com/zh/xftp/) 等
@@ -190,4 +191,103 @@ userlist_deny=NO
 
 ### 虚拟用户配置
 
-TODO
+系统用户模式可以有效的控制访问，但是随着使用用户增多，需要创建大量系统用户，这对服务器系统的管理产生了巨大影响，甚至对服务器安全造成威胁。这时我们就可以使用虚拟用户进行登录，以方便管理。
+
+虚拟用户模式实际上没有真实的系统用户，其是通过映射到一个真实的用户以及设置的权限来实现访问验证，虚拟用户在 linux 中实际不存在，提升了系统的安全性。
+
+1. 修改配置文件 `/etc/vsftpd/vsftpd.conf`：
+
+   ```bash
+   anonymous_enable=NO  # 设定不允许匿名访问
+   local_enable=YES  # 设定本地用户可以访问。
+   write_enable=YES  # 设定可以进行写操作。
+   local_umask=022  # 设定上传后文件的权限掩码。
+   anon_upload_enable=NO  # 禁止匿名用户上传。
+   anon_mkdir_write_enable=NO  # 禁止匿名用户建立目录。
+   dirmessage_enable=YES  # 设定开启目录标语功能。
+   xferlog_enable=YES  # 设定开启日志记录功能。
+   connect_from_port_20=YES # 设定端口 20 进行数据连接。(主动模式)
+   chown_uploads=NO  # 设定禁止上传文件更改宿主。
+   xferlog_file=/var/log/xferlog
+   # 设定 vsftpd 的服务日志保存路径。
+   xferlog_std_format=YES # 设定日志使用标准的记录格式。
+   async_abor_enable=YES  #设定支持异步传输功能。
+   ascii_upload_enable=YES
+   ascii_download_enable=YES  #设定支持ASCII模式的上传和下载功能。
+   
+   chroot_list_enable=NO #禁止用户登出自己的 FTP 主目录。
+   ls_recurse_enable=NO  #禁止用户登陆 FTP 后使用 "ls -R" 的命令。
+   listen=YES
+   
+   userlist_enable=YES  # 设定 userlist_file 中的用户将不得使用 FTP
+   tcp_wrappers=YES  # 设定支持 TCP Wrappers
+   
+   guest_enable=YES  # 设定启用虚拟用户功能。
+   guest_username=www  # 指定虚拟用户的宿主用户，即 linux 中真实存在的用户
+   virtual_use_local_privs=YES  # 设定虚拟用户的权限符合他们的宿主用户。
+   pam_service_name=vsftpd  # 设定 PAM 服务下 vsftpd 的验证配置文件名。因此，PAM 验证将参考 /etc/pam.d/ 下的 vsftpd 文件配置。
+   user_config_dir=/etc/vsftpd/virtualconf  # 设定虚拟用户个人 vsftp 的配置文件存放路径。也就是说，这个被指定的目录里，将存放每个 vsftp 虚拟用户个性的配置文件，一个需要注意的地方就是这些配置文件名必须和虚拟用户名相同。
+   ```
+
+   随后需要创建对应的虚拟用户配置文件夹
+
+   ```bash
+   mkdir -p /etc/vsftpd/virtualconf
+   ```
+
+2. 制作虚拟用户数据库文件 `vim /etc/vsftpd/virtusers`，这个文件的文件名以及路径是可以自定义的，用于储存虚拟用户用户名与密码的文件，在文件中写入如下内容：
+
+   ```
+   user1
+   123456
+   user2
+   123456
+   ```
+
+   该文件格式为：一行用户名对应一行密码
+
+   随后生成虚拟用户数据文件：
+
+   ```bash
+   db_load hash /etc/vsftpd/virtusers /etc/vsftpd/virtusers.db
+   ```
+
+3. 设置 PAM 验证文件，并指定上一步创建的虚拟用户数据库文件，vsftp 的 PAM 验证配置文件路径为 `/etc/pam.d/vsftpd` ，编辑该文件，并在文件末尾新增如下内容：
+
+   ```
+   #%PAM-1.0
+   auth    sufficient      /lib/security/pam_userdb.so     db=/etc/vsftpd/virtusers
+   account sufficient      /lib/security/pam_userdb.so     db=/etc/vsftpd/virtusers
+   ```
+
+   如当前系统是 64 位的，则需要使用如下内容：
+
+   ```
+   #%PAM-1.0
+   auth    sufficient      /lib64/security/pam_userdb.so     db=/etc/vsftpd/virtusers
+   account sufficient      /lib64/security/pam_userdb.so     db=/etc/vsftpd/virtusers
+   ```
+
+   其中 `/etc/vsftpd/virtusers` 为第二步生成的虚拟用户数据库文件。
+
+4. 修改虚拟用户配置文件，将虚拟用户配置文件存入 `/etc/vsftpd/virtualconf/` 目录，文件名为*虚拟用户名*，例如虚拟用户为 `user1`，则对应的文件名为 `/etc/vsftpd/virtualconf/user1`，对应配置项与主配置项基本相同，该配置文件未指定的内容则由主配置文件决定，对应配置项如下：
+
+   ```yaml
+   local_root=/www/server/blog # 指定虚拟用户的具体主路径。
+   write_enable=YES # 设定允许写操作。
+   anon_upload_enable=NO # 设定不允许匿名用户上传。
+   anon_mkdir_write_enable=NO # 设定不允许匿名用户建立目录。
+   idle_session_timeout=600 # 设定空闲连接超时时间。
+   data_connection_timeout=120 # 设定单次连续传输最大时间。
+   max_clients=10 # 设定并发客户端访问个数。
+   max_per_ip=5 # 设定单个客户端的最大线程数，这个配置主要来照顾 Flashget、迅雷等多线程下载软件。
+   local_max_rate=50000 # 设定该用户的最大传输速率，单位 b/s。
+   ```
+
+5. 重启 vsftpd 即可使用虚拟用户连接：
+
+   ```bash
+   service vsftpd restart # 重启
+   ```
+
+   
