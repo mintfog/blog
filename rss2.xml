@@ -9,8 +9,36 @@
     <atom:link href="https://www.codeover.cn/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>董飞祥个人博客网站，此个人博客是一个专注于IT技术学习交流的个人技术博客网站，包括敏捷开发、网站开发、服务器运维等领域，创建该个人博客也是为了方便与志同道合的朋友一起互相学习交流，分享经验，感谢大家的支持。</description>
-    <pubDate>Wed, 01 Jun 2022 21:49:30 GMT</pubDate>
+    <pubDate>Sat, 04 Jun 2022 00:00:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>linux 禁止 root 登录与密钥登录配置</title>
+      <link>https://www.codeover.cn/forbid-root/</link>
+      <guid>https://www.codeover.cn/forbid-root/</guid>
+      <pubDate>Sat, 04 Jun 2022 00:00:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;为了安全起见，生产环境服务器通常禁止 root 用户的 ssh 连接，这通常是防止服务器被暴力破解，我们实际使用普通用户去连接，然后切换到 root 执行命令或使用 sudo 执行命令。&lt;/p&gt;
+&lt;h2 id=&quot;禁止root登录&quot;&gt;&lt;a href=&quot;#禁止root登录&quot; class=&quot;headerlink&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://www.codeover.cn/categories/linux/">linux</category>
+      
+      
+      <category domain="https://www.codeover.cn/tags/linux/">linux</category>
+      
+      
+      <comments>https://www.codeover.cn/forbid-root/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>linux 安装 vsftpd 服务以及配置全攻略</title>
