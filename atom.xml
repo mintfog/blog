@@ -279,7 +279,7 @@
     <link href="https://www.codeover.cn/nginx-server-config/"/>
     <id>https://www.codeover.cn/nginx-server-config/</id>
     <published>2022-04-26T20:23:30.000Z</published>
-    <updated>2022-04-26T20:23:30.000Z</updated>
+    <updated>2022-06-05T00:00:00.000Z</updated>
     
     
     <summary type="html">nginx web server就是虚拟网站配置，每个server都对应了一个网站，本文介绍了如何配置nginx web server, 以及反向代理的配置等，从语法与示例讲解。</summary>
