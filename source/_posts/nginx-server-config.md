@@ -8,6 +8,7 @@ tags:
 - linux
 - Nginx
 categories: nginx
+updated: 2022-06-05
 ---
 
 Nginx 配置文件中至少包含一条定义虚拟服务器的 `server` 指令, 当 Nginx 处理一个请求时，第一个被选中的虚拟服务器将用于处理该请求
@@ -173,7 +174,7 @@ server {
 	server_name  localhost;
 
 	location / {
-		proxy_pass  http://127.0.0.1:8080
+		proxy_pass  http://127.0.0.1:8080;
 	}
 }
 ```
