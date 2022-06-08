@@ -42,8 +42,9 @@ jobs:
           publish_dir: ./public
           publish_branch: gh-pages
           full_commit_message: ${{ github.event.head_commit.message }}
+          keep_files: true
       - name: Deploy to Server
-        uses: easingthemes/ssh-deploy@v2.0.7
+        uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.TOKEN }}
           ARGS: "-avzr --delete"
