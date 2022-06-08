@@ -6,7 +6,7 @@
   <link href="https://www.codeover.cn/atom.xml" rel="self"/>
   
   <link href="https://www.codeover.cn/"/>
-  <updated>2022-06-04T00:00:00.000Z</updated>
+  <updated>2022-06-08T22:04:03.000Z</updated>
   <id>https://www.codeover.cn/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>rsync 配置和使用</title>
+    <link href="https://www.codeover.cn/rsync/"/>
+    <id>https://www.codeover.cn/rsync/</id>
+    <published>2022-06-08T22:04:03.000Z</published>
+    <updated>2022-06-08T22:04:03.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;rsync 是 linux 系统下的数据镜像备份工具，可以快速增量备份，支持远程同步、本地复制，或者与其他 ssh、rsync主机同步。rsync 具有安全性高、备份迅速、支持增量备份等诸多优点，通过 rsync</summary>
+        
+      
+    
+    
+    
+    <category term="linux" scheme="https://www.codeover.cn/categories/linux/"/>
+    
+    
+    <category term="linux" scheme="https://www.codeover.cn/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>linux 禁止 root 登录与密钥登录配置</title>
