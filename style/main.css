@@ -1305,6 +1305,21 @@ nav {
   font-weight: bold;
   color: #ccc;
 }
+.post-content pre code:hover .copy-code {
+  display: block;
+}
+.post-content pre code .copy-code {
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  right: 8px;
+  top: 4px;
+  font-size: 22px;
+  color: #9a9a9a;
+}
+.post-content pre code .copy-code .copy-success {
+  font-size: 16px;
+}
 .post-content table {
   border-collapse: collapse;
   margin: 1rem 0;
@@ -1479,9 +1494,27 @@ nav {
   font-weight: bold;
   color: #ccc;
 }
+.highlight:hover .copy-code {
+  display: block;
+}
+.highlight .copy-code {
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  right: 8px;
+  top: 4px;
+  font-size: 22px;
+  color: #9a9a9a;
+}
+.highlight .copy-code .copy-success {
+  font-size: 16px;
+}
 pre[class*=language-] {
-  padding: 0;
-  margin: 0;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+pre[class*=language-] code {
+  color: #476582;
 }
 pre[class*=language-].line-numbers {
   background: #fafafa;
