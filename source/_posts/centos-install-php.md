@@ -7,6 +7,7 @@ tags:
 - linux
 - php
 categories: linux
+updated: 2022-06-12
 ---
 
 
@@ -62,7 +63,7 @@ useradd -g www www -M -s /sbin/nologin
 
 ```bash
 # 生成编译文件
-./configure --prefix=/www/server/php81 --with-config-file-path=/www/server/php81/etc --enable-fpm --with-fpm-group=www --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd --with-iconv-dir --with-freetype-dir --with-mcrypt --with-jpeg-dir --with-png-dir -with-zlib --with-libxml-dir --enable-xml -enable-rpath --enable-inline-optimization --with-curl -enable-mbstring --with-gd --enable-gd-native-ttf --with-openssl --with-mhash --enable-pcntl --with-xmlrpc --enable-zip --enable-soap --with-gettext --enable-opcache --with-xsl
+./configure --prefix=/www/server/php81 --with-config-file-path=/www/server/php81/etc --enable-fpm --with-fpm-group=www --enable-mysqlnd --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd --with-iconv-dir --with-freetype --with-mcrypt --with-jpeg --with-png -with-zlib --with-libxml-dir --enable-xml --disable-rpath --enable-bcmath --enable-shmop --enable-sysvsem --enable-inline-optimization --with-curl -enable-mbstring --enable-gd --with-openssl --with-mhash --enable-pcntl --with-xmlrpc --enable-zip --enable-soap --with-gettext --enable-opcache --with-xsl --enable-sockets --enable-mbregex --enable-ftp --with-webp
 # 编译并安装
 make && make install
 # 复制配置文件
