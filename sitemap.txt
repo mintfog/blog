@@ -12,6 +12,7 @@ https://www.codeover.cn/nginx-balancing/
 https://www.codeover.cn/nginx-gzip/
 https://www.codeover.cn/nginx-log-config/
 https://www.codeover.cn/nginx-server-config/
+https://www.codeover.cn/php-socket/
 https://www.codeover.cn/rsync/
 https://www.codeover.cn/weichat-mini-decompilation/
 https://www.codeover.cn/about/index.html
@@ -24,7 +25,9 @@ https://www.codeover.cn/tags/mysql/
 https://www.codeover.cn/tags/Nginx/
 https://www.codeover.cn/tags/php/
 https://www.codeover.cn/tags/redis/
+https://www.codeover.cn/tags/socket/
 https://www.codeover.cn/categories/linux/
 https://www.codeover.cn/categories/mysql/
 https://www.codeover.cn/categories/nginx/
 https://www.codeover.cn/categories/redis/
+https://www.codeover.cn/categories/socket/
