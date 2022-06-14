@@ -56,6 +56,10 @@ bottom_link:
     url: https://beian.miit.gov.cn
     text: 豫ICP备2022011962号
     class: icp
+  gongan:
+    url: http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=41010402002848
+    text: 豫公网安备41010402002848号
+    class: icp
   rss:
     url: # beian.miit.gov.cn
     text: # 沪ICP备 09007032号-1
