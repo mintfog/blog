@@ -8,13 +8,14 @@ tags:
 - php
 - socket
 categories: socket
+updated: 2022-06-15
 ---
 
 
 
 ## socket介绍
 
-实现网络进程之间的通信，几乎所有应用程序都是采用 socket，socket是应用层与 TCP/IP 协议族通信的中间抽象层，它是一组接口。在设计模式中，socket其实是一个门面模式，它把复杂的 TCP/IP 协议族隐藏在 socket 接口后面，对用户来说，一局简单的接口就是全部，让 socket 去阻止数据，以符合指定的协议
+实现网络进程之间的通信，几乎所有应用程序都是采用 socket，socket是应用层与 TCP/IP 协议族通信的中间抽象层，它是一组接口。在设计模式中，socket其实是一个门面模式，它把复杂的 TCP/IP 协议族隐藏在 socket 接口后面，对用户来说，一组简单的接口就是全部，让 socket 去组织数据，以符合指定的协议
 
 ![socket流程图](https://cdn.codeover.cn/img/socket_flow_chart.jpg-imageFop)
 
