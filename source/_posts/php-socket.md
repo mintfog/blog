@@ -8,14 +8,19 @@ tags:
 - php
 - socket
 categories: socket
-updated: 2022-06-15
+updated: 2022-06-17
 ---
 
+## 前言
 
+这是一篇系列文章，文章列表：
+
+1. [php原生socket实现客户端与服务端数据传输](https://www.codeover.cn/php-socket/)
+2. [php原生socket之IO多路复用以及实现web服务器](https://www.codeover.cn/php-socket-http/)
 
 ## socket介绍
 
-实现网络进程之间的通信，几乎所有应用程序都是采用 socket，socket是应用层与 TCP/IP 协议族通信的中间抽象层，它是一组接口。在设计模式中，socket其实是一个门面模式，它把复杂的 TCP/IP 协议族隐藏在 socket 接口后面，对用户来说，一组简单的接口就是全部，让 socket 去组织数据，以符合指定的协议
+实现网络进程之间的通信，几乎所有应用程序都是采用 socket，socket 是应用层与 TCP/IP 协议族通信的中间抽象层，它是一组接口。在设计模式中，socket 其实是一个门面模式，它把复杂的 TCP/IP 协议族隐藏在 socket 接口后面，对用户来说，一组简单的接口就是全部，让 socket 去组织数据，以符合指定的协议
 
 ![socket流程图](https://cdn.codeover.cn/img/socket_flow_chart.jpg-imageFop)
 
@@ -183,7 +188,7 @@ socket_listen(resource $socket [, int $backlog]): bool
 socket_accept(resource $socket): resource|false
 ```
 
-阻塞并监听套接字创建的连接，用户接收客户端请求
+当有新的客户端连接时，返回一个新的 socket 资源以用于与客户端通信，如有多个连接排队，则返回第一个连接，相反如果没有待处理的连接，该函数会默认阻塞当前进程，直至新的客户端连接、断开
 
 参数：
 
