@@ -8,6 +8,7 @@ tags:
 - php
 - socket
 categories: socket
+updated: 2022-06-20
 ---
 
 ## 前言
@@ -15,7 +16,8 @@ categories: socket
 这是一篇系列文章，文章列表：
 
 1. [php原生socket实现客户端与服务端数据传输](https://www.codeover.cn/php-socket/)
-2. [php原生socket之IO多路复用以及实现web服务器](https://www.codeover.cn/php-socket-http/)
+2. php原生socket之IO多路复用以及实现web服务器
+3. [php原生socket实现websocket](https://www.codeover.cn/php-socket-http/php-socket-websocket)
 
 ## 多路复用
 
@@ -107,7 +109,7 @@ while (true) {
 
 在本示例中 `socket_select` 函数会阻塞当前进程，当 `$tmp_sockets` 数组内的 socket 资源有新的客户端连接或断开或收到新消息时，会将 `$tmp_sockets` 数组修改为当前活跃的 socket 资源，随后通过遍历该数组处理业务逻辑
 
-![优化结果截图](https://cdn.codeover.cn/img/GIF 2022-6-15 23-25-48.gif-imageFop)
+![优化结果截图](https://cdn.codeover.cn/img/GIF2022-6-1523-25-48.gif-imageFop)
 
 ## 使用socket实现简易http服务器
 

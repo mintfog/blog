@@ -8,15 +8,16 @@ tags:
 - php
 - socket
 categories: socket
-updated: 2022-06-17
+updated: 2022-06-20
 ---
 
 ## 前言
 
 这是一篇系列文章，文章列表：
 
-1. [php原生socket实现客户端与服务端数据传输](https://www.codeover.cn/php-socket/)
+1. php原生socket实现客户端与服务端数据传输
 2. [php原生socket之IO多路复用以及实现web服务器](https://www.codeover.cn/php-socket-http/)
+3. [php原生socket实现websocket](https://www.codeover.cn/php-socket-http/php-socket-websocket)
 
 ## socket介绍
 
