@@ -17,7 +17,7 @@ updated: 2022-06-20
 
 1. php原生socket实现客户端与服务端数据传输
 2. [php原生socket之IO多路复用以及实现web服务器](https://www.codeover.cn/php-socket-http/)
-3. [php原生socket实现websocket](https://www.codeover.cn/php-socket-http/php-socket-websocket)
+3. [php原生socket实现websocket](https://www.codeover.cn/php-socket-websocket/)
 
 ## socket介绍
 
