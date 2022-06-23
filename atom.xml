@@ -6,7 +6,7 @@
   <link href="https://www.codeover.cn/atom.xml" rel="self"/>
   
   <link href="https://www.codeover.cn/"/>
-  <updated>2022-06-20T00:00:00.000Z</updated>
+  <updated>2022-06-23T00:00:00.000Z</updated>
   <id>https://www.codeover.cn/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>php原生socket实现websocket</title>
+    <title>php原生socket实现websocket聊天室</title>
     <link href="https://www.codeover.cn/php-socket-websocket/"/>
     <id>https://www.codeover.cn/php-socket-websocket/</id>
     <published>2022-06-20T00:00:00.000Z</published>
-    <updated>2022-06-20T00:00:00.000Z</updated>
+    <updated>2022-06-23T00:00:00.000Z</updated>
     
     
     <summary type="html">本文介绍socket的原理与使用php原生方式的简单实现，php原生socket从入门到实战websocket聊天室，webSocket 协议是一种网络通信协议，全双工网络通信协议，html5支持，所有浏览器都兼容了此协议</summary>
@@ -63,7 +63,7 @@
     <link href="https://www.codeover.cn/php-socket/"/>
     <id>https://www.codeover.cn/php-socket/</id>
     <published>2022-06-14T00:00:00.000Z</published>
-    <updated>2022-06-20T00:00:00.000Z</updated>
+    <updated>2022-06-23T00:00:00.000Z</updated>
     
     
     <summary type="html">本文介绍socket的原理与使用php原生方式的简单实现，系列文章：php原生socket从入门到实战websocket聊天室，实现网络进程之间的通信，几乎所有应用程序都是采用 socket，socket是应用层与 TCP/IP 协议族通信的中间抽象层，它是一组接口。</summary>
