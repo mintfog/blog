@@ -9,8 +9,31 @@
     <atom:link href="https://www.codeover.cn/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>董飞祥个人博客网站，此个人博客是一个专注于IT技术学习交流的个人技术博客网站，包括敏捷开发、网站开发、服务器运维等领域，创建该个人博客也是为了方便与志同道合的朋友一起互相学习交流，分享经验，感谢大家的支持。</description>
-    <pubDate>Thu, 23 Jun 2022 00:00:00 GMT</pubDate>
+    <pubDate>Tue, 28 Jun 2022 00:00:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>关于微信支付V3 PHP7.2以下实现方式</title>
+      <link>https://www.codeover.cn/weichatpayv3byphp7/</link>
+      <guid>https://www.codeover.cn/weichatpayv3byphp7/</guid>
+      <pubDate>Tue, 28 Jun 2022 00:00:00 GMT</pubDate>
+      
+      <description>PHP7.0接入微信支付V3，微信支付APIV3平台公钥下载，平台证书下载，大概是今年 4、5 月份开通 “微信代付” 也就是商户平台的钱通过接口转账到用户余额里这个功能，更新了一版，更新完之后接入方式与之前完全分离，也就是完全不一样了。</description>
+      
+      
+      
+      
+      <category domain="https://www.codeover.cn/categories/socket/">socket</category>
+      
+      
+      <category domain="https://www.codeover.cn/tags/php/">php</category>
+      
+      <category domain="https://www.codeover.cn/tags/socket/">socket</category>
+      
+      
+      <comments>https://www.codeover.cn/weichatpayv3byphp7/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>php原生socket实现websocket聊天室</title>

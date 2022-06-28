@@ -6,7 +6,7 @@
   <link href="https://www.codeover.cn/atom.xml" rel="self"/>
   
   <link href="https://www.codeover.cn/"/>
-  <updated>2022-06-23T00:00:00.000Z</updated>
+  <updated>2022-06-28T00:00:00.000Z</updated>
   <id>https://www.codeover.cn/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于微信支付V3 PHP7.2以下实现方式</title>
+    <link href="https://www.codeover.cn/weichatpayv3byphp7/"/>
+    <id>https://www.codeover.cn/weichatpayv3byphp7/</id>
+    <published>2022-06-28T00:00:00.000Z</published>
+    <updated>2022-06-28T00:00:00.000Z</updated>
+    
+    
+    <summary type="html">PHP7.0接入微信支付V3，微信支付APIV3平台公钥下载，平台证书下载，大概是今年 4、5 月份开通 “微信代付” 也就是商户平台的钱通过接口转账到用户余额里这个功能，更新了一版，更新完之后接入方式与之前完全分离，也就是完全不一样了。</summary>
+    
+    
+    
+    <category term="socket" scheme="https://www.codeover.cn/categories/socket/"/>
+    
+    
+    <category term="php" scheme="https://www.codeover.cn/tags/php/"/>
+    
+    <category term="socket" scheme="https://www.codeover.cn/tags/socket/"/>
+    
+  </entry>
   
   <entry>
     <title>php原生socket实现websocket聊天室</title>
