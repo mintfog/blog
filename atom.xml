@@ -6,7 +6,7 @@
   <link href="https://www.codeover.cn/atom.xml" rel="self"/>
   
   <link href="https://www.codeover.cn/"/>
-  <updated>2022-06-28T00:00:00.000Z</updated>
+  <updated>2022-06-30T00:00:00.000Z</updated>
   <id>https://www.codeover.cn/</id>
   
   <author>
@@ -17,23 +17,52 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>laravel-admin 根据路由自动切换语言包</title>
+    <link href="https://www.codeover.cn/laravel-admin-lang/"/>
+    <id>https://www.codeover.cn/laravel-admin-lang/</id>
+    <published>2022-06-30T00:00:00.000Z</published>
+    <updated>2022-06-30T00:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="代码速记" scheme="https://www.codeover.cn/categories/%E4%BB%A3%E7%A0%81%E9%80%9F%E8%AE%B0/"/>
+    
+    
+    <category term="php" scheme="https://www.codeover.cn/tags/php/"/>
+    
+    <category term="laravel" scheme="https://www.codeover.cn/tags/laravel/"/>
+    
+    <category term="代码速记" scheme="https://www.codeover.cn/tags/%E4%BB%A3%E7%A0%81%E9%80%9F%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>关于微信支付V3 PHP7.2以下实现方式</title>
     <link href="https://www.codeover.cn/weichatpayv3byphp7/"/>
     <id>https://www.codeover.cn/weichatpayv3byphp7/</id>
     <published>2022-06-28T00:00:00.000Z</published>
-    <updated>2022-06-28T00:00:00.000Z</updated>
+    <updated>2022-06-30T00:00:00.000Z</updated>
     
     
     <summary type="html">PHP7.0接入微信支付V3，微信支付APIV3平台公钥下载，平台证书下载，大概是今年 4、5 月份开通 “微信代付” 也就是商户平台的钱通过接口转账到用户余额里这个功能，更新了一版，更新完之后接入方式与之前完全分离，也就是完全不一样了。</summary>
     
     
     
-    <category term="socket" scheme="https://www.codeover.cn/categories/socket/"/>
+    <category term="代码速记" scheme="https://www.codeover.cn/categories/%E4%BB%A3%E7%A0%81%E9%80%9F%E8%AE%B0/"/>
     
     
     <category term="php" scheme="https://www.codeover.cn/tags/php/"/>
     
-    <category term="socket" scheme="https://www.codeover.cn/tags/socket/"/>
+    <category term="代码速记" scheme="https://www.codeover.cn/tags/%E4%BB%A3%E7%A0%81%E9%80%9F%E8%AE%B0/"/>
     
   </entry>
   
