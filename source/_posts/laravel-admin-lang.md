@@ -18,7 +18,7 @@ laravel 的本地化功能提供了一种方便的方法来检索各种语言的
 
 ## 代码部分
 
-`app\Admin\Middleware` 
+`app\Admin\Middleware\SwitchLanguage.php` 
 
 ```php
 <?php
@@ -83,7 +83,7 @@ class SwitchLanguage
 ],
 ```
 
-在 `config/admin.php` 中添加该中间件：
+然后在 `config/admin.php` 中添加该中间件：
 
 ```diff
 'route' => [
