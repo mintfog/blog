@@ -9,8 +9,33 @@
     <atom:link href="https://www.codeover.cn/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>董飞祥个人博客网站，此个人博客是一个专注于IT技术学习交流的个人技术博客网站，包括敏捷开发、网站开发、服务器运维等领域，创建该个人博客也是为了方便与志同道合的朋友一起互相学习交流，分享经验，感谢大家的支持。</description>
-    <pubDate>Thu, 30 Jun 2022 00:00:00 GMT</pubDate>
+    <pubDate>Sun, 24 Jul 2022 00:00:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>elasticsearch 全文搜索引擎基本使用</title>
+      <link>https://www.codeover.cn/elasticsearch/</link>
+      <guid>https://www.codeover.cn/elasticsearch/</guid>
+      <pubDate>Sun, 24 Jul 2022 00:00:00 GMT</pubDate>
+      
+      <description>elasticsearch 8全文搜索与分面搜索, 常见的电商搜索方案，同义词搜索，分面搜索，相似商品推荐，php使用elasticsearch，laravel使用elasticsearch</description>
+      
+      
+      
+      
+      <category domain="https://www.codeover.cn/categories/es/">es</category>
+      
+      
+      <category domain="https://www.codeover.cn/tags/php/">php</category>
+      
+      <category domain="https://www.codeover.cn/tags/laravel/">laravel</category>
+      
+      <category domain="https://www.codeover.cn/tags/es/">es</category>
+      
+      
+      <comments>https://www.codeover.cn/elasticsearch/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>laravel-admin 根据路由自动切换语言包</title>

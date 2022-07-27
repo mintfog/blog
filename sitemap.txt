@@ -1,3 +1,4 @@
+https://www.codeover.cn/elasticsearch/
 https://www.codeover.cn/laravel-admin-lang/
 https://www.codeover.cn/weichatpayv3byphp7/
 https://www.codeover.cn/php-socket-websocket/
@@ -30,11 +31,13 @@ https://www.codeover.cn/tags/Nginx/
 https://www.codeover.cn/tags/php/
 https://www.codeover.cn/tags/redis/
 https://www.codeover.cn/tags/laravel/
+https://www.codeover.cn/tags/es/
 https://www.codeover.cn/tags/%E4%BB%A3%E7%A0%81%E9%80%9F%E8%AE%B0/
 https://www.codeover.cn/tags/socket/
 https://www.codeover.cn/categories/linux/
 https://www.codeover.cn/categories/mysql/
 https://www.codeover.cn/categories/nginx/
 https://www.codeover.cn/categories/redis/
+https://www.codeover.cn/categories/es/
 https://www.codeover.cn/categories/%E4%BB%A3%E7%A0%81%E9%80%9F%E8%AE%B0/
 https://www.codeover.cn/categories/socket/
