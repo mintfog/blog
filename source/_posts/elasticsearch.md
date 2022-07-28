@@ -1,5 +1,5 @@
 ---
-title: elasticsearch 全文搜索引擎基本使用
+title: Elasticsearch 全文搜索引擎基本使用
 date: 2022-07-24
 keywords: es,elasticsearch,全文搜索,elasticsearch 7,elasticsearch 8,分面搜索,同义词搜索,相似推荐,电商搜索,搜索引擎
 description: elasticsearch 8全文搜索与分面搜索, 常见的电商搜索方案，同义词搜索，分面搜索，相似商品推荐，php使用elasticsearch，laravel使用elasticsearch
@@ -9,6 +9,7 @@ tags:
 - laravel
 - es
 categories: es
+updated: 2022-07-28
 ---
 
 Elasticsearch 是一个分布式的搜索和分析引擎，可以用于全文检索、结构化检索和分析，并能将这三者结合起来。Elasticsearch 基于 Lucene 开发，是 Lucene 的封装，提供了 REST API 的操作接口，开箱即用。现在是使用最广的开源搜索引擎之一，Wikipedia、Stack Overflow、GitHub 等都基于 Elasticsearch 来构建他们的搜索引擎。
@@ -343,7 +344,214 @@ rm -f elasticsearch-analysis-ik-8.2.3.zip
 
 ## 分面搜索
 
+我们可以在京东上搜索一下『手机』：
 
+![京东分面搜索](https://cdn.codeover.cn/img/image-20220728220719329.png-imageFop)
+
+我们可以看到京东把一些属性聚合在一起并做成了链接，我们可以点击聚合的链接进一步的筛选商品，这个功能就叫做分面搜索，分面搜索是搜索引擎中非常重要的一个功能，可以帮助用户更方便的搜索想要的商品。
+
+想要实现分面搜索就需要用到 Elasticsearch 中的聚合，其与 SQL 语句的 `group by` 有些类似，但更加灵活和强大
+
+在实现分面搜索之前，我们需要先对索引结构进行调整：
+
+```bash
+curl -H'Content-Type: application/json' -XPUT http://localhost:9200/test_index/_mapping -d'{
+  "properties": {
+    "title": { "type": "text", "analyzer": "ik_smart" }, 
+    "description": { "type": "text", "analyzer": "ik_smart" },
+    "price": { "type": "scaled_float", "scaling_factor": 100 },
+    "properties": {
+      "type": "nested",
+      "properties": {
+        "name": { "type": "keyword" }, 
+        "value": { "type": "keyword" }
+      }
+    }
+  }
+}'
+curl -H'Content-Type: application/json' -XPUT http://localhost:9200/test_index/_doc/1 -d'{
+    "title": "iPhone XR",
+    "description": "全新国产",
+    "price": 12800,
+    "properties": [{
+        "name": "品牌名称",
+        "value": "苹果"
+    }, {
+        "name": "机身内存",
+        "value": "256G"
+    }]
+}'
+curl -H'Content-Type: application/json' -XPUT http://localhost:9200/test_index/_doc/2 -d'{
+    "title": "VIVO X3",
+    "description": "全新国产正品",
+    "price": 3600,
+    "properties": [{
+        "name": "品牌名称",
+        "value": "VIVO"
+    }, {
+        "name": "机身内存",
+        "value": "128G"
+    }]
+}'
+curl -H'Content-Type: application/json' -XPUT http://localhost:9200/test_index/_doc/3 -d'{
+    "title": "iPhone 13 PLUS",
+    "description": "全新国行",
+    "price": 9800,
+    "properties": [{
+        "name": "品牌名称",
+        "value": "苹果"
+    }, {
+        "name": "机身内存",
+        "value": "520G"
+    }]
+}'
+```
+
+可以看到我们在 `test_index` 索引新增了一个 `properties` 字段用于储存商品属性，并插入了三条测试文档。接下来我们尝试进行搜索：
+
+```bash
+curl -XPOST -H'Content-Type:application/json' http://localhost:9200/test_index/_search?pretty -d'
+{
+	"from": 0,
+	"size": 10,
+	"sort": [{
+		"price": "desc"
+	}],
+	"query": {
+		"bool": {
+			"must": [{
+				"multi_match": {
+					"query": "全新",
+					"fields": ["title^2", "description"]
+				}
+			}]
+		}
+	},
+	"aggs": {
+		"properties": {
+			"nested": {
+				"path": "properties"
+			},
+			"aggs": {
+				"properties": {
+					"terms": {
+						"field": "properties.name"
+					}
+				}
+			}
+		}
+	}
+}'
+```
+
+以上搜索条件返回如下：
+
+![返回示例](https://cdn.codeover.cn/img/image-20220728231814918.png-imageFop)
+
+以下为对应字段解释
+
+```json
+'aggs' => [
+    // 这里的 properties 是我们给这个聚合操作的命名
+    // 可以是任意字符串，与商品结构里的 properties 没有必然联系
+    'properties' => [
+        // 由于我们要聚合的属性是在 nested 类型字段下的属性，需要在外面套一层 nested 聚合查询
+        'nested' => [ 
+            // 代表我们要查询的 nested 字段名为 properties
+            'path' => 'properties',
+        ],
+        // 在 nested 聚合下嵌套聚合
+        'aggs'   => [
+            // 聚合的名称
+            'properties' => [
+                // terms 聚合，用于聚合相同的值
+                'terms' => [
+                    // 我们要聚合的字段名
+                    'field' => 'properties.name',
+                ],
+            ],
+        ],
+    ]
+]
+```
+
+返回信息解释：
+
+```json
+ // 聚合结果
+ "aggregations" => [
+   // 第一层聚合的名称
+   "properties" => [
+     // 聚合了 6 个文档，即搜索结果中共有 6 个商品属性
+     "doc_count" => 6,
+     // 第二层聚合的名称
+     "properties" => [
+       "doc_count_error_upper_bound" => 0,
+       "sum_other_doc_count" => 0,
+       // 第二层聚合结果
+       "buckets" => [
+         [
+           // properties.name 为『品牌名称』的属性共有 3 个
+           "key" => "品牌名称", 
+           "doc_count" => 3,
+         ],
+         [
+           "key" => "机身内存",
+           "doc_count" => 3,
+         ],
+       ],
+     ],
+   ],
+ ],
+```
+
+解决下我们进行第三层聚合，也就是属性值的聚合
+
+```bash
+curl -XPOST -H'Content-Type:application/json' http://localhost:9200/test_index/_search?pretty -d'
+{
+	"from": 0,
+	"size": 10,
+	"sort": [{
+		"price": "desc"
+	}],
+	"query": {
+		"bool": {
+			"must": [{
+				"multi_match": {
+					"query": "全新",
+					"fields": ["title^2", "description"]
+				}
+			}]
+		}
+	},
+	"aggs": {
+		"properties": {
+			"nested": {
+				"path": "properties"
+			},
+			"aggs": {
+				"properties": {
+					"terms": {
+						"field": "properties.name"
+					},
+					"aggs": {
+						"value": {
+							"terms": {
+								"field": "properties.value"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}'
+```
+
+![第三层聚合](https://cdn.codeover.cn/img/image-20220728232629770.png-imageFop)
+
+此时可以看到几乎已实现类似于京东分面搜索的功能。
 
 ## 同义词搜索
 
