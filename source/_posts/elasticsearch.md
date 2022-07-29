@@ -9,7 +9,7 @@ tags:
 - laravel
 - es
 categories: es
-updated: 2022-07-28
+updated: 2022-07-29
 ---
 
 Elasticsearch 是一个分布式的搜索和分析引擎，可以用于全文检索、结构化检索和分析，并能将这三者结合起来。Elasticsearch 基于 Lucene 开发，是 Lucene 的封装，提供了 REST API 的操作接口，开箱即用。现在是使用最广的开源搜索引擎之一，Wikipedia、Stack Overflow、GitHub 等都基于 Elasticsearch 来构建他们的搜索引擎。
@@ -555,17 +555,122 @@ curl -XPOST -H'Content-Type:application/json' http://localhost:9200/test_index/_
 
 ## 同义词搜索
 
+在前面的内容中，我们实现了基本的搜索，某个文档要想在某个关键词搜索结果中出现，就必须在文档内容中出现该关键词，这样就需要给商品配置巨量的关键词才能让商品出现的频率提高， 对运营管理人员不甚友好。为了解决这个问题，我们就需要让搜索引擎支持 *同义词搜索*，比如用户搜索「苹果手机」，那么包含 「Iphone」 的文档也会出现在搜索结果中。
+
+作为目前最强大的搜索引擎之一，Elasticsearch 是默认支持 *同义词搜索* 的。
+
+### 分析器
+
+Elasticsearch 的分析器是由 「字符过滤器」、「分词器」与「字符过滤器」三部分组成，Elasticsearch 内置了一些 「分析器」，同时也允许我们自行定义分析器。
+
+- **字符过滤器**：「字符过滤器」会以字符为单位，根据一定的规则去添加、删除、替换原始字符串，比如将汉字的 「一二三四」替换成阿拉伯数字「1234」，一个「分析器」可以包含 0 个或多个「字符过滤器」。
+- **分词器**：「分词器」是根据一定的规则，将原始字符串拆分成一组组的词语，比如前文介绍的 `ik_smart` 分词器，其可以将「苹果手机」拆分成「苹果」和「手机」两个词语，一个「分析器」有且仅能有一个「分词器」。
+- **词语过滤器**：「词语过滤器」会根据「分词器」的分词结果，以词语为单位，根据一定的规则去添加、删除、替换词句，例如同义词过滤器 `synonym` 可以将「西红柿」替换为 「西红柿」+「番茄」两个词，一个「分析器」可以包含 0 个或多个「词语过滤器」。
+
+### 自定义分析器
+
+首先我们先创建同义词对应关系的文本文件，格式形如 `iPhone,苹果手机 => iPhone,苹果手机`，每行一组关键词：
+
+```bash
+cd /www/server/elasticsearch/config/
+mkdir analysis
+echo "iPhone,苹果手机 => iPhone,苹果手机" > analysis/synonyms.txt
+```
 
 
-## 推荐相似商品
 
+接下来我们创建一个自定义分析器，我们创建一个新的索引来测试，Elasticsearch 支持在创建索引的同时创建「分析器」：
 
+```bash
+curl -XPUT -H'Content-Type: application/json' http://localhost:9200/test_synonym?pretty -d' 
+{
+  "settings": {
+    "index": {
+      "analysis": {
+        "filter": {
+          "synonym_filter": {
+            "type": "synonym",
+            "synonyms_path": "analysis/synonyms.txt",
+            "updateable":  true
+          }
+        },
+        "analyzer": {
+          "ik_smart_synonym": {
+            "type": "custom",
+            "tokenizer": "ik_smart",
+            "filter": ["synonym_filter"]
+          }
+        }
+      }
+    }
+  }
+}'
+```
+
+在这个请求中我们在 `analysis` 下的 `filter` 中定义了一个名为 `synonym_filter` 的『同义词词语过滤器』，并且指定同义词的字典路径为 `analysis/synonyms.txt`；同时在 `analyzer` 下定义了一个名为 `ik_smart_synonym` 的「自定义分析器」，并指定 `ik_smart` 作为「分词器」，上面定义的 `synonym_filter` 作为「词语过滤器」。
+
+#### 测试
+
+我们来测试一下这个分析器的效果：
+
+```bash
+curl -H'Content-Type: application/json' http://localhost:9200/test_synonym/_analyze?pretty -d '{"text": "苹果手机","analyzer":"ik_smart_synonym"}'
+```
+
+返回内容如下：
+
+```json
+{
+  "tokens" : [
+    {
+      "token" : "iphone",
+      "start_offset" : 0,
+      "end_offset" : 4,
+      "type" : "SYNONYM",
+      "position" : 0
+    },
+    {
+      "token" : "苹果",
+      "start_offset" : 0,
+      "end_offset" : 2,
+      "type" : "SYNONYM",
+      "position" : 0
+    },
+    {
+      "token" : "手机",
+      "start_offset" : 2,
+      "end_offset" : 4,
+      "type" : "SYNONYM",
+      "position" : 1
+    }
+  ]
+}
+```
+
+可以看到「分析器」将关键词 `苹果手机` 拆分成为了 `iphone` 、 `苹果` 与 `手机` 三个词。
 
 ## 在 php 中使用 Elasticsearch
 
+1. 引入 Composer 包
 
+Elasticsearch 官方提供了 Composer 包，因为不同版本的 Elasticsearch 的 API 略有不同，所以在引入时需要注意要指定版本，例如引入 `8.x` 版本：
 
-## 在 Go 中使用 Elasticsearch
+```bash
+composer require elasticsearch/elasticsearch '^7.0'
+```
+
+2. 实例化 Elasticsearch 实例
+
+```php
+$builder = Elastic\Elasticsearch\ClientBuilder::create()->setHosts(['localhost:9200']);
+
+$client = $builder->build();
+
+// 获取 test_index 索引中 ID 为 1 的文档
+$client->get(['index' => 'test_index', 'id' => 1]);
+```
+
+SDK 详细使用说明可参考官方文档：https://www.elastic.co/guide/cn/elasticsearch/php/current/_quickstart.html
 
 [^1]: JDK 全称 **Java Development Kit**。它是 Java 语言的软件开发工具包，主要用于移动设备、嵌入式设备上的 java 应用程序。JDK 是整个 java 开发的核心，它包含了 JAVA 的运行环境（JVM+Java 系统类库）和 JAVA 工具。
 [^2]: x-pack 是 elasticsearch 的一个扩展包，集安全，警告，监视，图形和报告功能于一体，可以轻松的启用或者关闭一些功能。
