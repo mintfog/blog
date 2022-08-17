@@ -9,3 +9,4 @@ _multiconfig.yml
 themes/hexo-theme-minimalism
 .idea
 package-lock.json
+yarn.lock
