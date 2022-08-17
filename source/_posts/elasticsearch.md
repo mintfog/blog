@@ -9,7 +9,7 @@ tags:
 - laravel
 - es
 categories: es
-updated: 2022-07-29
+updated: 2022-08-17
 ---
 
 Elasticsearch 是一个分布式的搜索和分析引擎，可以用于全文检索、结构化检索和分析，并能将这三者结合起来。Elasticsearch 基于 Lucene 开发，是 Lucene 的封装，提供了 REST API 的操作接口，开箱即用。现在是使用最广的开源搜索引擎之一，Wikipedia、Stack Overflow、GitHub 等都基于 Elasticsearch 来构建他们的搜索引擎。
@@ -331,7 +331,7 @@ curl -XPOST -H'Content-Type:application/json' http://localhost:9200/test_index/_
 
 Elasticsearch 默认提供了一堆的分词器，比如 `standard`、`whitespace`、`language(比如english)` 等分词器，但是都对中文分词的效果不太好，为了实现更好的搜索效果，我们需要安装第三方分词器来进行分词，比较常见的就是 `ik` 分词器。
 
-`ik` 分词器的安装比较简单，首先前往 github 选择与你的 Elasticsearch 相同的版本下载，下载地址：https://github.com/medcl/elasticsearch-analysis-ik/releases，随后解压至 的 `plugins/ik/` 目录下即可。如下下载 8.2.3 版本：
+`ik` 分词器的安装比较简单，首先前往 github 选择与你的 Elasticsearch 相同的版本下载，下载地址：[https://github.com/medcl/elasticsearch-analysis-ik/releases](https://github.com/medcl/elasticsearch-analysis-ik/releases)，随后解压至 的 `plugins/ik/` 目录下即可。如下下载 8.2.3 版本：
 
 ```bash
 cd /www/server/elasticsearch/plugins
