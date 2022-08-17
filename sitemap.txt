@@ -1,3 +1,4 @@
+https://www.codeover.cn/proxy-settings/
 https://www.codeover.cn/elasticsearch/
 https://www.codeover.cn/laravel-admin-lang/
 https://www.codeover.cn/weichatpayv3byphp7/
@@ -13,8 +14,8 @@ https://www.codeover.cn/centos-install-apache/
 https://www.codeover.cn/centos_install_memcached/
 https://www.codeover.cn/centos-install-redis/
 https://www.codeover.cn/weichat-mini-decompilation/
-https://www.codeover.cn/tags/index.html
 https://www.codeover.cn/categories/index.html
+https://www.codeover.cn/tags/index.html
 https://www.codeover.cn/about/index.html
 https://www.codeover.cn/mysql-master-slave/
 https://www.codeover.cn/mysql-backup-recovery/

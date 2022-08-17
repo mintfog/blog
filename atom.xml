@@ -6,7 +6,7 @@
   <link href="https://www.codeover.cn/atom.xml" rel="self"/>
   
   <link href="https://www.codeover.cn/"/>
-  <updated>2022-08-17T00:00:00.000Z</updated>
+  <updated>2022-08-17T22:04:03.000Z</updated>
   <id>https://www.codeover.cn/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>各常用包管理器配置科学上网代理</title>
+    <link href="https://www.codeover.cn/proxy-settings/"/>
+    <id>https://www.codeover.cn/proxy-settings/</id>
+    <published>2022-08-17T22:04:03.000Z</published>
+    <updated>2022-08-17T22:04:03.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;在日常使用各包管理器时，经常会出现被 GFW</summary>
+        
+      
+    
+    
+    
+    <category term="代码速记" scheme="https://www.codeover.cn/categories/%E4%BB%A3%E7%A0%81%E9%80%9F%E8%AE%B0/"/>
+    
+    
+    <category term="代码速记" scheme="https://www.codeover.cn/tags/%E4%BB%A3%E7%A0%81%E9%80%9F%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>Elasticsearch 全文搜索引擎基本使用</title>
