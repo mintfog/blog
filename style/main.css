@@ -274,8 +274,10 @@ summary {
 .site-footer .social-container a {
   margin: 0 8px;
 }
+hr {
+  margin: 10px 0;
+}
 .site-header-container {
-  position: fixed;
   right: 0;
   left: 0;
   z-index: 1024;
@@ -381,7 +383,7 @@ a.purple-link {
 .content-container {
   width: 100%;
   flex: 1;
-  padding: 48px 16px 32px;
+  padding: 0 16px 32px;
 }
 .post-item {
   display: flex;
@@ -406,7 +408,6 @@ a.purple-link {
   line-height: 24px;
   position: relative;
   display: -webkit-box;
-  overflow: hidden;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
@@ -477,6 +478,14 @@ a.purple-link {
 nav {
   overflow: hidden;
 }
+@media (min-width: 1200px) {
+  .main {
+    max-width: 1000px;
+  }
+  .site-header {
+    max-width: 1000px;
+  }
+}
 .pagination-container {
   padding: 24px 0;
   overflow: hidden;
@@ -495,7 +504,7 @@ nav {
   float: right;
 }
 .post-detail {
-  padding: 18px 0;
+  padding: 0;
 }
 .post-detail .post-title {
   font-size: 32px;
@@ -539,7 +548,7 @@ nav {
 }
 .post-content a:hover {
   color: #0081f9;
-  font-size: 16.1px;
+  text-decoration: underline;
 }
 .post-content img {
   display: block;
@@ -748,7 +757,7 @@ nav {
   color: var(--c-base-purple);
 }
 .archives-container {
-  padding: 20px 0;
+  padding: 0;
 }
 .archives-container .year {
   font-size: 26px;
@@ -772,7 +781,7 @@ nav {
   border-radius: 50%;
   background: var(--c-base-purple);
   position: absolute;
-  left: 0px;
+  left: 0;
   top: 50%;
   transform: translateY(-50%);
   opacity: 0;
@@ -847,6 +856,133 @@ nav {
 }
 .highlight .copy-code .copy-success {
   font-size: 16px;
+}
+/* 夜间主题 */
+html.dark {
+  background-color: #121212;
+  color: #fff;
+}
+html.dark .post-title {
+  color: #e3e3e3;
+}
+html.dark .post-item .content .post-title {
+  color: #e3e3e3;
+}
+html.dark .post-item .content .post-abstract {
+  color: #afafaf;
+}
+html.dark .post-detail .post-title {
+  color: #d3d3d3;
+}
+html.dark .post-content p {
+  color: #c0c0c0;
+}
+html.dark .post-content code {
+  color: #e3e3e3;
+  background-color: rgba(110,118,129,0.4);
+  border: none;
+  border-radius: 6px;
+}
+html.dark .post-content h1,
+html.dark .post-content h2,
+html.dark .post-content h3,
+html.dark .post-content h4,
+html.dark .post-content h5,
+html.dark .post-content h6 {
+  color: #ddd;
+}
+html.dark .post-content img {
+  box-shadow: none;
+}
+html.dark .post-content table {
+  color: #c0c0c0;
+}
+html.dark .post-content table tr:hover {
+  background-color: #2e2e2e;
+}
+html.dark .post-content ul,
+html.dark .post-content ol {
+  color: #c0c0c0;
+}
+html.dark .post-content blockquote {
+  background: #000;
+}
+html.dark .highlight,
+html.dark pre[class*=language-].line-numbers {
+  background-color: #000;
+}
+html.dark .highlight .copy-code,
+html.dark pre[class*=language-].line-numbers .copy-code {
+  color: #7e7e7e;
+}
+html.dark .highlight table tr:hover,
+html.dark pre[class*=language-].line-numbers table tr:hover {
+  background-color: #000;
+}
+html.dark .keyword,
+html.dark .selector-tag,
+html.dark .subst {
+  color: #e3e3e3;
+}
+html.dark .site-header-container {
+  background-color: #121212;
+}
+html.dark .site-header {
+  box-shadow: none;
+}
+html.dark .site-header .site-title {
+  color: #c0c0c0;
+}
+html.dark .top-box li a {
+  color: #e3e3e3;
+}
+html.dark .top-box li a:hover,
+html.dark .top-box li a.current {
+  color: #006cff !important;
+  background: #ddd;
+}
+html.dark .next-post .post-title {
+  color: #e3e3e3;
+}
+html.dark .next-post .purple-link {
+  background: linear-gradient(180deg, transparent 70%, #657de1 0);
+}
+html.dark .pagination-container a,
+html.dark .site-footer a {
+  color: #c0c0c0;
+}
+html.dark .menu-container {
+  background-color: #121212;
+}
+html.dark .menu-container .menu-list a {
+  color: #c0c0c0;
+}
+html.dark .gt-container .gt-comment-body {
+  color: #dfdfdf !important;
+}
+html.dark .markdown-body blockquote {
+  border-left: 0.25em solid #959595;
+}
+html.dark .gt-container .gt-comment-content:hover {
+  box-shadow: none;
+}
+html.dark .gt-container .gt-header-textarea {
+  background-color: #424a54 !important;
+  color: #dfdfdf;
+}
+html.dark .gt-container .gt-header-textarea:hover {
+  background-color: #424a54;
+}
+html.dark .gt-container .gt-comment-content {
+  background-color: #000;
+}
+html.dark .gt-container .gt-svg svg {
+  fill: #6190e8;
+}
+html.dark .tag,
+html.dark .name,
+html.dark .attribute {
+  color: #2d22dd;
 }
 pre[class*=language-] {
   padding: 0 !important;
