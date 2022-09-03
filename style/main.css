@@ -278,6 +278,7 @@ hr {
   margin: 10px 0;
 }
 .site-header-container {
+  position: fixed;
   right: 0;
   left: 0;
   z-index: 1024;
@@ -383,7 +384,7 @@ a.purple-link {
 .content-container {
   width: 100%;
   flex: 1;
-  padding: 0 16px 32px;
+  padding: 46px 16px 32px;
 }
 .post-item {
   display: flex;
@@ -542,6 +543,7 @@ nav {
   color: #0c1e29;
 }
 .post-content a {
+  word-break: break-all;
   color: #0e78db;
   font-weight: 600;
   transition: all 0.2s;
@@ -614,10 +616,10 @@ nav {
   font-weight: bold;
   color: #ccc;
 }
-.post-content pre code:hover .copy-code {
+.post-content pre:hover .copy-code {
   display: block;
 }
-.post-content pre code .copy-code {
+.post-content pre .copy-code {
   cursor: pointer;
   display: none;
   position: absolute;
@@ -626,8 +628,11 @@ nav {
   font-size: 22px;
   color: #9a9a9a;
 }
-.post-content pre code .copy-code .copy-success {
+.post-content pre .copy-code .copy-success {
   font-size: 16px;
+}
+.post-content pre[class*=language-].line-numbers {
+  position: relative;
 }
 .post-content table {
   border-collapse: collapse;
@@ -863,22 +868,22 @@ html.dark {
   color: #fff;
 }
 html.dark .post-title {
-  color: #e3e3e3;
+  color: #c9d1d9;
 }
 html.dark .post-item .content .post-title {
-  color: #e3e3e3;
+  color: #c9d1d9;
 }
 html.dark .post-item .content .post-abstract {
   color: #afafaf;
 }
 html.dark .post-detail .post-title {
-  color: #d3d3d3;
+  color: #c9d1d9;
 }
 html.dark .post-content p {
-  color: #c0c0c0;
+  color: #c9d1d9;
 }
-html.dark .post-content code {
-  color: #e3e3e3;
+html.dark .post-content code:not([class*=language-]) {
+  color: #c9d1d9;
   background-color: rgba(110,118,129,0.4);
   border: none;
   border-radius: 6px;
@@ -919,10 +924,10 @@ html.dark .highlight table tr:hover,
 html.dark pre[class*=language-].line-numbers table tr:hover {
   background-color: #000;
 }
-html.dark .keyword,
-html.dark .selector-tag,
-html.dark .subst {
-  color: #e3e3e3;
+html.dark .highlight code[class*=language-],
+html.dark pre[class*=language-].line-numbers code[class*=language-] {
+  overflow-x: auto;
+  background: #000;
 }
 html.dark .site-header-container {
   background-color: #121212;
@@ -934,7 +939,7 @@ html.dark .site-header .site-title {
   color: #c0c0c0;
 }
 html.dark .top-box li a {
-  color: #e3e3e3;
+  color: #c9d1d9;
 }
 html.dark .top-box li a:hover,
 html.dark .top-box li a.current {
@@ -942,7 +947,7 @@ html.dark .top-box li a.current {
   background: #ddd;
 }
 html.dark .next-post .post-title {
-  color: #e3e3e3;
+  color: #c9d1d9;
 }
 html.dark .next-post .purple-link {
   background: linear-gradient(180deg, transparent 70%, #657de1 0);
@@ -979,10 +984,23 @@ html.dark .gt-container .gt-comment-content {
 html.dark .gt-container .gt-svg svg {
   fill: #6190e8;
 }
-html.dark .tag,
-html.dark .name,
-html.dark .attribute {
+html.dark .highlight .tag,
+html.dark .highlight .name,
+html.dark .highlight .attribute {
   color: #2d22dd;
+}
+html.dark .highlight .deletion {
+  color: #ffdcd7;
+  background: #67060c;
+}
+html.dark .highlight .addition {
+  color: #aff5b4;
+  background-color: #033a16;
+}
+html.dark .keyword,
+html.dark .selector-tag,
+html.dark .subst {
+  color: #c9d1d9;
 }
 pre[class*=language-] {
   padding: 0 !important;
