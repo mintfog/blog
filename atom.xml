@@ -6,7 +6,7 @@
   <link href="https://www.codeover.cn/atom.xml" rel="self"/>
   
   <link href="https://www.codeover.cn/"/>
-  <updated>2022-08-18T00:00:00.000Z</updated>
+  <updated>2022-09-27T22:21:03.000Z</updated>
   <id>https://www.codeover.cn/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Go 语言的基本数据类型</title>
+    <link href="https://www.codeover.cn/go-basic-data-type/"/>
+    <id>https://www.codeover.cn/go-basic-data-type/</id>
+    <published>2022-09-27T22:21:03.000Z</published>
+    <updated>2022-09-27T22:21:03.000Z</updated>
+    
+    
+    <summary type="html">Go语言内置布尔、字符串、整数、字节、Unicode、浮点、复数等基本类型。变量申明时没有显式赋初始值，则默认是“零”。</summary>
+    
+    
+    
+    <category term="Go" scheme="https://www.codeover.cn/categories/Go/"/>
+    
+    
+    <category term="Go" scheme="https://www.codeover.cn/tags/Go/"/>
+    
+  </entry>
   
   <entry>
     <title>各常用包管理器配置科学上网代理</title>
