@@ -6,7 +6,7 @@
   <link href="https://www.codeover.cn/atom.xml" rel="self"/>
   
   <link href="https://www.codeover.cn/"/>
-  <updated>2022-09-27T22:21:03.000Z</updated>
+  <updated>2022-10-09T00:00:00.000Z</updated>
   <id>https://www.codeover.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.codeover.cn/go-basic-data-type/"/>
     <id>https://www.codeover.cn/go-basic-data-type/</id>
     <published>2022-09-27T22:21:03.000Z</published>
-    <updated>2022-09-27T22:21:03.000Z</updated>
+    <updated>2022-10-09T00:00:00.000Z</updated>
     
     
     <summary type="html">Go语言内置布尔、字符串、整数、字节、Unicode、浮点、复数等基本类型。变量申明时没有显式赋初始值，则默认是“零”。</summary>
