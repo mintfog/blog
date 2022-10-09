@@ -7,6 +7,7 @@ description: Go语言内置布尔、字符串、整数、字节、Unicode、浮�
 tags:
 - Go
 categories: Go
+updated: 2022-10-09
 ---
 
 数据类型的出现是为了用大数据需要存储不同的数据，编程的时候的时间才需要申请大的内存，可以利用内存。
@@ -40,9 +41,54 @@ Go 的整型主要分为有符号和无符号两大类。按长度可以分为 `
 |   `int`   | 有符号 | **特殊** 在 32 位操作系统就是 `int32`，64 位操作系统就是 `int64`，但不能将其赋值给 `int32` 或 `int64` 变量 |
 | `uintptr` | 无符号 | 无符号整型，用于存放一个指针                                 |
 
+#### 数字字面量语法（Number literals syntax）
+
+在 Go 1.13 版本之后引入了数字字面量语法，这样便于开发者以二进制、八进制或十六进制浮点数的格式定义数字，例如：
+
+`v := 0b00101101`， 代表二进制的 101101，相当于十进制的 45。 `v := 0o377`，代表八进制的 377，相当于十进制的 255。 `v := 0x1p-2`，代表十六进制的 1 除以 2²，也就是 0.25。
+
+而且还允许我们用 `_` 来分隔数字，比如说： `v := 123_456` 表示 v 的值等于 123456。
+
+我们可以借助 fmt 函数来将一个整数以不同进制形式展示。
+
+```go
+package main
+ 
+import "fmt"
+ 
+func main(){
+	// 十进制
+	var a int = 10
+	fmt.Printf("%d \n", a)  // 10
+	fmt.Printf("%b \n", a)  // 1010  占位符%b表示二进制
+ 
+	// 八进制  以0开头
+	var b int = 077
+	fmt.Printf("%o \n", b)  // 77
+ 
+	// 十六进制  以0x开头
+	var c int = 0xff
+	fmt.Printf("%x \n", c)  // ff
+	fmt.Printf("%X \n", c)  // FF
+}
+```
+
 ### 浮点型
 
 Go 语言支持两种浮点型数：`float32`和`float64`。这两种浮点型数据格式遵循 `IEEE 754` 标准： `float32` 的浮点数的最大范围约为 `3.4e38`，可以使用常量定义：`math.MaxFloat32`。 `float64` 的浮点数的最大范围约为 `1.8e308`，可以使用一个常量定义：`math.MaxFloat64`。
+
+```go
+package main
+
+import (
+        "fmt"
+        "math"
+)
+func main() {
+        fmt.Printf("%f\n", math.Pi)
+        fmt.Printf("%.2f\n", math.Pi)
+}
+```
 
 ## 字符串
 
