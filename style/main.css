@@ -997,6 +997,14 @@ html.dark .highlight .addition {
   color: #aff5b4;
   background-color: #033a16;
 }
+html.dark .deletion {
+  color: #ffdcd7;
+  background: #67060c;
+}
+html.dark .addition {
+  color: #aff5b4;
+  background: #033a16;
+}
 html.dark .keyword,
 html.dark .selector-tag,
 html.dark .subst {
