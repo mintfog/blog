@@ -42,12 +42,12 @@ MMD 的脚注语法得到广泛的传播和认可，大部分的 Markdown 编辑
 
 你不妨把鼠标移动到编号上去看看效果😊。
 
-[^1] 英文称为footnote，用于为正文补充注解（解释性加注）或标明被引用于正文或注解的数据源。一般，脚注会在文章内以符号或数字标示，然后在文章末端（也就是文章的「脚」），列出所有的补充、数据源的详情。脚注让编者补充细节之余，也不影响行文的聚焦，让版面显得更整齐。
-[^2] MultiMarkdown，又名 MMD，是 Markdown 的衍生产品，它添加了新的语法功能，例如脚注、表格和元数据。
-[^3] basic footnote content
-[^4] inline footnote
-[^5] paragraph
+[^1]: 英文称为footnote，用于为正文补充注解（解释性加注）或标明被引用于正文或注解的数据源。一般，脚注会在文章内以符号或数字标示，然后在文章末端（也就是文章的「脚」），列出所有的补充、数据源的详情。脚注让编者补充细节之余，也不影响行文的聚焦，让版面显得更整齐。
+[^2]: MultiMarkdown，又名 MMD，是 Markdown 的衍生产品，它添加了新的语法功能，例如脚注、表格和元数据。
+[^3]: basic footnote content
+[^4]: inline footnote
+[^5]: paragraph
 footnote
 content
-[^6] footnote content with some markdown
-[^7] Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+[^6]: footnote content with some markdown
+[^7]: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
