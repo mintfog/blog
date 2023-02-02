@@ -9,8 +9,31 @@
     <atom:link href="https://www.codeover.cn/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>董飞祥个人博客网站，此个人博客是一个专注于IT技术学习交流的个人技术博客网站，包括敏捷开发、网站开发、服务器运维等领域，创建该个人博客也是为了方便与志同道合的朋友一起互相学习交流，分享经验，感谢大家的支持。</description>
-    <pubDate>Mon, 24 Oct 2022 00:00:00 GMT</pubDate>
+    <pubDate>Thu, 02 Feb 2023 17:30:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Hexo 主题里的脚注功能</title>
+      <link>https://www.codeover.cn/hexo-footnotes/</link>
+      <guid>https://www.codeover.cn/hexo-footnotes/</guid>
+      <pubDate>Thu, 02 Feb 2023 17:30:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h2 id=&quot;Markdown-的脚注&quot;&gt;&lt;a href=&quot;#Markdown-的脚注&quot; class=&quot;headerlink&quot; title=&quot;Markdown 的脚注&quot;&gt;&lt;/a&gt;Markdown 的脚注&lt;/h2&gt;&lt;p&gt;Markdown 基本语法中并不包含脚注&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a</description>
+          
+        
+      
+      
+      
+      
+      
+      
+      <comments>https://www.codeover.cn/hexo-footnotes/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Go 语言的基本数据类型</title>
@@ -43,7 +66,8 @@
         
           
           
-      <description>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;在日常使用各包管理器时，经常会出现被 GFW</description>
+      <description>&lt;p&gt;在日常使用各包管理器时，经常会出现被 GFW 劫持的情况，为此耽误了太多时间，故写此文已记录各常用包管理器科学上网的方法（如有你有更好的方案或有纰漏请留言！）&lt;/p&gt;
+&lt;h2 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot;</description>
           
         
       
@@ -95,7 +119,7 @@
         
           
           
-      <description>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot;</description>
+      <description>&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;laravel 的本地化功能提供了一种方便的方法来检索各种语言的字符串，从而可以轻松的在应用内支持多种语言，我们一般将语言文件存放在 &lt;code&gt;lang&lt;/code&gt;</description>
           
         
       
@@ -218,7 +242,7 @@
         
           
           
-      <description>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;rsync 是 linux 系统下的数据镜像备份工具，可以快速增量备份，支持远程同步、本地复制，或者与其他</description>
+      <description>&lt;p&gt;rsync 是 linux 系统下的数据镜像备份工具，可以快速增量备份，支持远程同步、本地复制，或者与其他 ssh、rsync主机同步。rsync 具有安全性高、备份迅速、支持增量备份等诸多优点，通过 rsync</description>
           
         
       
@@ -245,7 +269,8 @@
         
           
           
-      <description>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;为了安全起见，生产环境服务器通常禁止 root 用户的 ssh</description>
+      <description>&lt;p&gt;为了安全起见，生产环境服务器通常禁止 root 用户的 ssh 连接，这通常是防止服务器被暴力破解，我们实际使用普通用户去连接，然后切换到 root 执行命令或使用 sudo 执行命令。&lt;/p&gt;
+&lt;h2 id=&quot;禁止root登录&quot;&gt;&lt;a href=&quot;#禁止root登录&quot; class=&quot;headerlink&quot;</description>
           
         
       
@@ -337,7 +362,7 @@
         
           
           
-      <description>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;PHP（全称：PHP：Hypertext</description>
+      <description>&lt;p&gt;PHP（全称：PHP：Hypertext</description>
           
         
       
@@ -366,7 +391,8 @@
         
           
           
-      <description>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;</description>
+      <description>&lt;p&gt;通过主从复制功能，创建一个或者多个从库，可以有效提高数据库的可用性、可扩展性。当主库发生故障时，可以快速将某一个从库切换为主库使用而不影响正常业务；随着系统中业务访问量的增大，可以把读请求的负载分布到各个从库上，写请求则转发给主库，形成读写分离的架构，来提供更好的读扩展和请求的负载均衡。&lt;/p&gt;
+&lt;h2</description>
           
         
       
@@ -395,7 +421,7 @@
         
           
           
-      <description>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;数据库在运行过程中，总会遇到各种各样的问题：硬件故障、&lt;code&gt;bug&lt;/code&gt;</description>
+      <description>&lt;p&gt;数据库在运行过程中，总会遇到各种各样的问题：硬件故障、&lt;code&gt;bug&lt;/code&gt; 导致数据损坏、由于服务器宕机或者其他原因造成的数据库不可用。除此以外还有人为操作如 &lt;code&gt;DELETE&lt;/code&gt; 语句忘加条件、&lt;code&gt;ALTER TABLE&lt;/code&gt; 执行错表、&lt;code&gt;DROP</description>
           
         
       
@@ -424,7 +450,7 @@
         
           
           
-      <description>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;刚度过了愉快又短暂的五一小长假，开工第一天，直接就被封印在家了&lt;span</description>
+      <description>&lt;p&gt;刚度过了愉快又短暂的五一小长假，开工第一天，直接就被封印在家了&lt;span class=&quot;github-emoji&quot;&gt;&lt;span&gt;😅&lt;/span&gt;&lt;img src=&quot;https://github.githubassets.com/images/icons/emoji/unicode/1f605.png?v8&quot;</description>
           
         
       
@@ -493,7 +519,8 @@
         
           
           
-      <description>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;为提高网页加载速度，启用 &lt;code&gt;gzip&lt;/code&gt; 缩减资源的大小是非常常见的手段。现代浏览器基本均支持</description>
+      <description>&lt;p&gt;为提高网页加载速度，启用 &lt;code&gt;gzip&lt;/code&gt; 缩减资源的大小是非常常见的手段。现代浏览器基本均支持 &lt;code&gt;gzip&lt;/code&gt; 压缩，并会为HTTP请求自动协商此类压缩。&lt;/p&gt;
+&lt;h2 id=&quot;处理过程&quot;&gt;&lt;a href=&quot;#处理过程&quot; class=&quot;headerlink&quot;</description>
           
         
       
@@ -545,7 +572,7 @@
         
           
           
-      <description>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h2 id=&quot;设置-access-log&quot;&gt;&lt;a href=&quot;#设置-access-log&quot;</description>
+      <description>&lt;h2 id=&quot;设置-access-log&quot;&gt;&lt;a href=&quot;#设置-access-log&quot; class=&quot;headerlink&quot; title=&quot;设置 access_log&quot;&gt;&lt;/a&gt;设置 access_log&lt;/h2&gt;&lt;h3 id=&quot;access-log-语法&quot;&gt;&lt;a href=&quot;#access-log-语法&quot;</description>
           
         
       

@@ -6,7 +6,7 @@
   <link href="https://www.codeover.cn/atom.xml" rel="self"/>
   
   <link href="https://www.codeover.cn/"/>
-  <updated>2022-10-24T00:00:00.000Z</updated>
+  <updated>2023-02-02T17:30:00.000Z</updated>
   <id>https://www.codeover.cn/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo 主题里的脚注功能</title>
+    <link href="https://www.codeover.cn/hexo-footnotes/"/>
+    <id>https://www.codeover.cn/hexo-footnotes/</id>
+    <published>2023-02-02T17:30:00.000Z</published>
+    <updated>2023-02-02T17:30:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Markdown-的脚注&quot;&gt;&lt;a href=&quot;#Markdown-的脚注&quot; class=&quot;headerlink&quot; title=&quot;Markdown 的脚注&quot;&gt;&lt;/a&gt;Markdown 的脚注&lt;/h2&gt;&lt;p&gt;Markdown 基本语法中并不包含脚注&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Go 语言的基本数据类型</title>
@@ -47,7 +68,8 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;在日常使用各包管理器时，经常会出现被 GFW</summary>
+    <summary type="html">&lt;p&gt;在日常使用各包管理器时，经常会出现被 GFW 劫持的情况，为此耽误了太多时间，故写此文已记录各常用包管理器科学上网的方法（如有你有更好的方案或有纰漏请留言！）&lt;/p&gt;
+&lt;h2 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -95,7 +117,7 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;laravel 的本地化功能提供了一种方便的方法来检索各种语言的字符串，从而可以轻松的在应用内支持多种语言，我们一般将语言文件存放在 &lt;code&gt;lang&lt;/code&gt;</summary>
         
       
     
@@ -208,7 +230,7 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;rsync 是 linux 系统下的数据镜像备份工具，可以快速增量备份，支持远程同步、本地复制，或者与其他</summary>
+    <summary type="html">&lt;p&gt;rsync 是 linux 系统下的数据镜像备份工具，可以快速增量备份，支持远程同步、本地复制，或者与其他 ssh、rsync主机同步。rsync 具有安全性高、备份迅速、支持增量备份等诸多优点，通过 rsync</summary>
         
       
     
@@ -233,7 +255,8 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;为了安全起见，生产环境服务器通常禁止 root 用户的 ssh</summary>
+    <summary type="html">&lt;p&gt;为了安全起见，生产环境服务器通常禁止 root 用户的 ssh 连接，这通常是防止服务器被暴力破解，我们实际使用普通用户去连接，然后切换到 root 执行命令或使用 sudo 执行命令。&lt;/p&gt;
+&lt;h2 id=&quot;禁止root登录&quot;&gt;&lt;a href=&quot;#禁止root登录&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -317,7 +340,7 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;PHP（全称：PHP：Hypertext</summary>
+    <summary type="html">&lt;p&gt;PHP（全称：PHP：Hypertext</summary>
         
       
     
@@ -344,7 +367,8 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;</summary>
+    <summary type="html">&lt;p&gt;通过主从复制功能，创建一个或者多个从库，可以有效提高数据库的可用性、可扩展性。当主库发生故障时，可以快速将某一个从库切换为主库使用而不影响正常业务；随着系统中业务访问量的增大，可以把读请求的负载分布到各个从库上，写请求则转发给主库，形成读写分离的架构，来提供更好的读扩展和请求的负载均衡。&lt;/p&gt;
+&lt;h2</summary>
         
       
     
@@ -371,7 +395,7 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;数据库在运行过程中，总会遇到各种各样的问题：硬件故障、&lt;code&gt;bug&lt;/code&gt;</summary>
+    <summary type="html">&lt;p&gt;数据库在运行过程中，总会遇到各种各样的问题：硬件故障、&lt;code&gt;bug&lt;/code&gt; 导致数据损坏、由于服务器宕机或者其他原因造成的数据库不可用。除此以外还有人为操作如 &lt;code&gt;DELETE&lt;/code&gt; 语句忘加条件、&lt;code&gt;ALTER TABLE&lt;/code&gt; 执行错表、&lt;code&gt;DROP</summary>
         
       
     
@@ -398,7 +422,7 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;刚度过了愉快又短暂的五一小长假，开工第一天，直接就被封印在家了&lt;span</summary>
+    <summary type="html">&lt;p&gt;刚度过了愉快又短暂的五一小长假，开工第一天，直接就被封印在家了&lt;span class=&quot;github-emoji&quot;&gt;&lt;span&gt;😅&lt;/span&gt;&lt;img src=&quot;https://github.githubassets.com/images/icons/emoji/unicode/1f605.png?v8&quot;</summary>
         
       
     
@@ -461,7 +485,8 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;为提高网页加载速度，启用 &lt;code&gt;gzip&lt;/code&gt; 缩减资源的大小是非常常见的手段。现代浏览器基本均支持</summary>
+    <summary type="html">&lt;p&gt;为提高网页加载速度，启用 &lt;code&gt;gzip&lt;/code&gt; 缩减资源的大小是非常常见的手段。现代浏览器基本均支持 &lt;code&gt;gzip&lt;/code&gt; 压缩，并会为HTTP请求自动协商此类压缩。&lt;/p&gt;
+&lt;h2 id=&quot;处理过程&quot;&gt;&lt;a href=&quot;#处理过程&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -509,7 +534,7 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h2 id=&quot;设置-access-log&quot;&gt;&lt;a href=&quot;#设置-access-log&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;设置-access-log&quot;&gt;&lt;a href=&quot;#设置-access-log&quot; class=&quot;headerlink&quot; title=&quot;设置 access_log&quot;&gt;&lt;/a&gt;设置 access_log&lt;/h2&gt;&lt;h3 id=&quot;access-log-语法&quot;&gt;&lt;a href=&quot;#access-log-语法&quot;</summary>
         
       
     
