@@ -1008,6 +1008,10 @@ html.dark pre[class*=language-].line-numbers code[class*=language-] {
   overflow-x: auto;
   background: #000;
 }
+html.dark .highlight .link,
+html.dark pre[class*=language-].line-numbers .link {
+  color: #0081f9;
+}
 html.dark .site-header-container {
   background-color: #121212;
 }
