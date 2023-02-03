@@ -3,6 +3,7 @@ title: Hexo 主题里的脚注功能
 date: 2023-02-02 17:30:00
 summary:  Markdown 基本语法中并不包含脚注语法，但是脚注作为一种常见的文本格式，对于文字编辑工作者，特别是像我这种喜欢插入引文的人而言，有着很大的使用需求。所以 Multi-Markdown 在其扩充语法集中增添了脚注的语法：
 keywords: Hexo,脚注,插件,Markdown,Multi-Markdown,语法,扩展
+updated: 2023-02-03
 ---
 
 ## Markdown 的脚注
@@ -19,7 +20,6 @@ this one with lot content[^7]
 ## 插件的安装和使用
 MMD 的脚注语法得到广泛的传播和认可，大部分的 Markdown 编辑器现在都采用了该语法来渲染脚注。可是 Hexo 的默认渲染器是不支持脚注语法的，所以我写了这个简单的功能来实现脚注的渲染。该功能已内置于 [主题](https://github.com/f-dong/hexo-theme-minimalism)。
 
-- 脚注部分功能参考于: [https://github.com/kchen0x/hexo-reference](https://github.com/kchen0x/hexo-reference)
 - 代码块内的脚注也会被渲染[^8]
 - 如需禁用脚注，可在主题配置文件 `_config.yml` 中设置 `footnote.enable` 的值为 `false`
 - 本功能参考了 [hexo-reference](https://github.com/kchen0x/hexo-reference)
