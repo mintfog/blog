@@ -19,6 +19,11 @@ this one with lot content[^7]
 ## 插件的安装和使用
 MMD 的脚注语法得到广泛的传播和认可，大部分的 Markdown 编辑器现在都采用了该语法来渲染脚注。可是 Hexo 的默认渲染器是不支持脚注语法的，所以我写了这个简单的功能来实现脚注的渲染。该功能已内置于 [主题](https://github.com/f-dong/hexo-theme-minimalism)。
 
+- 脚注部分功能参考于: [https://github.com/kchen0x/hexo-reference](https://github.com/kchen0x/hexo-reference)
+- 代码块内的脚注也会被渲染[^8]
+- 如需禁用脚注，可在主题配置文件 `_config.yml` 中设置 `footnote.enable` 的值为 `false`
+- 本功能参考了 [hexo-reference](https://github.com/kchen0x/hexo-reference)
+
 ### 示例
 
 ```markdown
@@ -35,8 +40,6 @@ MMD 的脚注语法得到广泛的传播和认可，大部分的 Markdown 编辑
 [^4]: 一些脚注内容 [markdown](https://en.wikipedia.org/wiki/Markdown)
 ```
 
-- 脚注部分功能参考于: [https://github.com/kchen0x/hexo-reference](https://github.com/kchen0x/hexo-reference)
-
 ## 扩展功能
 因为我有时候并不喜欢通过点击引用编号来往跳转于正文和脚注之间，相较之下我对维基百科风格的悬浮提示非常喜欢，所以我就想利用 Tooltip 工具来实现正文内的脚注呈现。实现了一种更加优雅的脚注呈现方式。
 
@@ -51,3 +54,4 @@ footnote
 content
 [^6]: footnote content with some markdown
 [^7]: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+[^8]: 默认不过滤代码块内的脚注，即在代码块内的脚注也会被渲染出来。如果你需要过滤代码块内的脚注，可以在主题配置文件 `_config.yml` 中设置 `footnote.ignoreCodeBlock` 的值为 `true`。
