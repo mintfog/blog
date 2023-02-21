@@ -1,7 +1,7 @@
 ---
 title: Go 语言中的 RSA 加密、解密、签名与验签
 date: 2023-02-21 22:21:03
-keywords: golang,Go语言,RSA,加密,解密,验签,签名,非对称加密,密码学,证书生成,RSA私钥生成
+keywords: golang,Go语言,RSA,加密,解密,验签,签名,非对称加密,密码学,证书生成,RSA私钥生成,php,php rsa
 summary:  RSA 加密演算法是一种非对称加密演算法，在一些项目中经常使用，在 golang 中 RSA 的加密、解密、签名与验签主要使用 crypto/x509 和 crypto/rsa 两个包中的方法。
 tags:
 - Go
@@ -124,7 +124,7 @@ func VerySignWithBase64(originalData, signData, pubKey string) (bool, error) {
 }
 ```
 
-## 附：公私钥的生成
+## 附1：公私钥的生成
 
 使用 GO 生成 RSA 公私钥较为简单，需要注意的是：私钥要严格保密，谨防外泄。生成公私钥代码如下: 
 
@@ -158,6 +158,85 @@ func GenRsaKey(bits int) (privateKey, publicKey string) {
 	privateKey = string(prvKey)
 	publicKey = string(pubKey)
 	return
+}
+```
+
+## 附2: PHP 中对应用法
+
+### 加密
+
+```php
+/**
+ * RSA 加密
+ *
+ * @param string $data 待加密数据
+ * @param string $publicKey 公钥
+ * @return string base64编码后的加密数据
+ */
+function rsaEncryptBase64($data, $publicKey)
+{
+    $publicKey = openssl_get_publickey($publicKey);
+    openssl_public_encrypt($data, $encrypt, $publicKey);
+    openssl_free_key($publicKey);
+    return base64_encode($encrypt);
+}
+```
+
+### 解密
+
+```php
+/**
+ * RSA 解密
+ *
+ * @param string $data base64编码的密文
+ * @param string $privateKey 私钥
+ * @return string 解密后的明文内容
+ */
+function rsaEncryptBase64($data, $privateKey)
+{
+    $privateKey = openssl_get_privatekey($privateKey);
+    openssl_private_decrypt($data, $encrypt, $privateKey);
+    openssl_free_key($privateKey);
+    return base64_encode($encrypt);
+}
+```
+
+### 签名
+
+```php
+/**
+ * 签名
+ *
+ * @param string $original_data 签名前的原始数据
+ * @param string $private_key 私钥
+ * @return string 签名后的 base64 字符串
+ */
+function verySignWithBase64($original_data, $private_key) {
+    $openssl_res = openssl_get_privatekey($private_key);
+    openssl_sign($original_data, $signature, $openssl_res, OPENSSL_ALGO_SHA256);
+    openssl_free_key($openssl_res);
+
+    return base64_encode($signature);
+}
+```
+
+### 验签
+
+```php
+/**
+ * 验证签名
+ *
+ * @param string $original_data 签名前的原始数据
+ * @param string $signature Base64 格式的签名串
+ * @param string $public_key 公钥（需与加密时使用的私钥相对应）
+ * @return bool 返回 true 代表验签通过，反之为不通过
+ */
+function verySignWithBase64($original_data, $signature, $public_key) {
+    $openssl_res = openssl_get_publickey($public_key);
+    $verify_res = openssl_verify($original_data, base64_decode($signature), $openssl_res, OPENSSL_ALGO_SHA256);
+    openssl_free_key($openssl_res);
+
+    return 1 == $verify_res;
 }
 ```
 
