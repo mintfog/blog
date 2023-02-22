@@ -14,10 +14,10 @@ $(".menu-switch").click(function () {
 
 if (window.is_post) {
     // 图片放大
-    $(".post-detail img").each(function() {
-        var currentImage = $(this);
-        currentImage.wrap("<a href='" + currentImage.attr("src") + "' data-fancybox='lightbox' data-caption='" + currentImage.attr("alt") + "'></a>");
-    });
+    // $(".post-detail img").each(function() {
+    //     var currentImage = $(this);
+    //     currentImage.wrap("<a href='" + currentImage.attr("src") + "' data-fancybox='lightbox' data-caption='" + currentImage.attr("alt") + "'></a>");
+    // });
 
     // 代码复制
     var $copyIcon = $('<i class="fa-solid icon icon-copy copy-code" title="复制代码"></i>');
@@ -104,4 +104,47 @@ if (window.is_post) {
             console.log($(window).scrollTop() - 54, '滚动条位置');
         }, 0);
     });
+}
+
+// 图片懒加载
+if (window.theme_config.image && window.theme_config.image.lazyload_enable) {
+    const imgs = document.querySelectorAll('img');
+    let now = Date.now();
+    let needLoad = true;
+
+    function lazyload(imgs) {
+        now = Date.now();
+        needLoad = Array.from(imgs).some(i => i.hasAttribute('lazyload'));
+
+        const h = window.innerHeight;
+        const s = document.documentElement.scrollTop || document.body.scrollTop;
+
+        imgs.forEach(img => {
+            if (img.hasAttribute('lazyload') && !img.hasAttribute('loading')) {
+
+                if ((h + s) > img.offsetTop) {
+                    img.setAttribute('loading', true);
+                    const loadImageTimeout = setTimeout(() => {
+                        const temp = new Image();
+                        const src = img.getAttribute('data-src');
+                        temp.src = src;
+                        temp.onload = () => {
+                            img.src = src;
+                            img.removeAttribute('lazyload');
+                            img.removeAttribute('loading');
+                            clearTimeout(loadImageTimeout);
+                        }
+                    }, 500);
+                }
+            }
+        });
+    }
+
+    lazyload(imgs);
+
+    window.onscroll = () => {
+        if (Date.now() - now > 50 && needLoad) {
+            lazyload(imgs);
+        }
+    }
 }
