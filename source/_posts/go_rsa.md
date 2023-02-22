@@ -68,7 +68,7 @@ func RsaDecryptBase64(encryptedData, privateKey string) (string, error) {
 - `privateKey`，RSA 私钥。
 - `返回值1` 解密后的明文数据。
 
-> 注: RSA 解密时对内容呦同样的长度限制，见前文说明。
+> 注: RSA 解密时对内容有同样的长度限制，见前文说明。
 
 ## 签名与验签
 
