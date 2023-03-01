@@ -13,7 +13,7 @@ Web 开发者，95后金牛座普通男青年，Laravel 脑残粉，重度代码
 
 | 名称 | 熟悉程度 |
 | --: | :-- |
-| Go | ★★★☆☆ |
+| Go | ★★★★☆ |
 | PHP | ★★★★★ |
 | CSS | ★★☆☆☆ |
 | Javascript | ★★★★☆ |
@@ -38,11 +38,12 @@ Web 开发者，95后金牛座普通男青年，Laravel 脑残粉，重度代码
 
 ### 支持与贡献
 
-如果你发现本博客有错误或需优化，可在文章底部的留言区发表留言，或前往 github 提交 PR ：
-文章内容请提交修改至此 [仓库](https://github.com/f-dong/blog)
-页面布局相关请提交修改至此 [仓库](https://github.com/f-dong/hexo-theme-minimalism)
-感谢你的支持与贡献
+随意 **pull request** 与提交 **issues**。
+
+请给我一个 star 支持我，谢谢！
+
+主题 [https://github.com/f-dong/hexo-theme-minimalism](https://github.com/f-dong/hexo-theme-minimalism)
 
 ### 关于版权
 
-本站所有文章，除有特殊说明外，均为原创，非商业转载请注明出处，商业转载请务必获得授权！
+本站所有文章，除有特殊说明外，均采用 [《CC 协议》](https://www.codeover.cn/about/cc_deed/)，非商业转载请注明出处，商业转载请务必获得授权！
