@@ -46,4 +46,4 @@ Web 开发者，95后金牛座普通男青年，Laravel 脑残粉，重度代码
 
 ### 关于版权
 
-本站所有文章，除有特殊说明外，均采用 [《CC 协议》](https://www.codeover.cn/about/cc_deed/)，非商业转载请注明出处，商业转载请务必获得授权！
+本站所有文章，除有特殊说明外，均采用 [《CC 协议》](https://www.codeover.cn/about/cc_deed.html)，非商业转载请注明出处，商业转载请务必获得授权！
