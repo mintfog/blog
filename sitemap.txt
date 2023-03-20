@@ -1,10 +1,10 @@
+https://www.codeover.cn/laravel-admin-lang/
 https://www.codeover.cn/about/cc_deed.html
 https://www.codeover.cn/go_rsa/
 https://www.codeover.cn/go-basic-data-type/
 https://www.codeover.cn/hexo-footnotes/
 https://www.codeover.cn/proxy-settings/
 https://www.codeover.cn/elasticsearch/
-https://www.codeover.cn/laravel-admin-lang/
 https://www.codeover.cn/weichatpayv3byphp7/
 https://www.codeover.cn/php-socket-websocket/
 https://www.codeover.cn/php-socket/
