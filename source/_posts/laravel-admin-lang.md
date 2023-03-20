@@ -8,6 +8,7 @@ tags:
 - laravel
 - 代码速记
 categories: 代码速记
+updated: 2023-03-20
 ---
 
 ## 背景
@@ -70,14 +71,14 @@ class SwitchLanguage
 ```php
 'multi_language' => [
     // 指定语言文件目录
-    'lang_directory' => resource_path('langext') . DIRECTORY_SEPARATOR,
+    'lang_directory' => resource_path('lang_admin') . DIRECTORY_SEPARATOR,
     // 支持的语言
     'languages' => [
         'en' => 'English',
         'zh_CN' => '简体中文',
     ],
     // 默认语言
-    'default' => 'zh_CN',
+    'default' => 'zh-CN',
     // cookie键，用于记住用户语言
     'cookie_name' => 'backend_locale',
 ],
@@ -97,7 +98,9 @@ class SwitchLanguage
 ],
 ```
 
-随后在 `resources/langext/控制器名/区域名/xxx.json` 中新增翻译内容即可，例如给 `ProductsController` 创建单独翻译文件，则翻译文件路径为 `resources/langext/Products/zh_CN/zh_CN.json`
+## 后续操作
+
+随后在 `resources/lang_admin/控制器名/区域名.json` 中新增翻译内容即可，例如给 `ProductsController` 创建单独翻译文件，则翻译文件路径为 `resources/lang_admin/Products/zh-CN.json`
 
 
 
