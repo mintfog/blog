@@ -3,11 +3,20 @@ title: Hexo 主题里的脚注功能
 date: 2023-02-02 17:30:00
 summary:  Markdown 基本语法中并不包含脚注语法，但是脚注作为一种常见的文本格式，对于文字编辑工作者，特别是像我这种喜欢插入引文的人而言，有着很大的使用需求。所以 Multi-Markdown 在其扩充语法集中增添了脚注的语法：
 keywords: Hexo,脚注,插件,Markdown,Multi-Markdown,语法,扩展
-updated: 2023-02-03
+updated: 2023-04-07
 ---
 
 ## Markdown 的脚注
-Markdown 基本语法中并不包含脚注[^1]语法，但是脚注作为一种常见的文本格式，对于文字编辑工作者，特别是像我这种喜欢插入引文的人而言，有着很大的使用需求。所以 Multi-Markdown[^2] 在其扩充语法集中增添了脚注的语法：
+Markdown 基本语法中并不包含脚注[^1] 语法，但是脚注作为一种常见的文本格式，对于文字编辑工作者，特别是像我这种喜欢插入引文的人而言，有着很大的使用需求。所以 Multi-Markdown[^2] 在其扩充语法集中增添了脚注的语法：
+
+```markdown
+this is a basic footnote[^3]
+here is an inline footnote[^4]
+and another one[^5]
+and another one[^6]
+this one with lot content[^7]
+```
+<br/>
 
 上面的语法经过语法渲染得到的结果就如下所示：
 
