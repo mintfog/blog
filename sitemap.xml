@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.codeover.cn/hexo-footnotes/</loc>
-    <lastmod>2023-04-07</lastmod>
+    <loc>https://www.codeover.cn/laravel-admin-lang/</loc>
+    <lastmod>2023-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.codeover.cn/laravel-admin-lang/</loc>
-    <lastmod>2023-03-20</lastmod>
+    <loc>https://www.codeover.cn/hexo-footnotes/</loc>
+    <lastmod>2023-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -245,7 +245,7 @@
   </url>
   
   <url>
-    <loc>https://www.codeover.cn/tags/Go/</loc>
+    <loc>https://www.codeover.cn/tags/GoLang/</loc>
     <lastmod>2023-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -302,7 +302,7 @@
   </url>
   
   <url>
-    <loc>https://www.codeover.cn/categories/Go/</loc>
+    <loc>https://www.codeover.cn/categories/GoLang/</loc>
     <lastmod>2023-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

@@ -962,6 +962,10 @@ html.dark .post-item .post-info a {
 html.dark .post-detail .post-title {
   color: #c9d1d9;
 }
+html.dark .post-detail .post-info,
+html.dark .post-detail .post-info a {
+  color: #759eff;
+}
 html.dark .post-content p {
   color: #c9d1d9;
 }
