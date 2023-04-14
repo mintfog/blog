@@ -1,7 +1,7 @@
 :root {
   --c-base-black: #0c1e29;
   --c-base-blacklight: #4e616c;
-  --c-base-purple: #4072ff;
+  --c-base-purple: #003df0;
   --c-base-purplelight: #c2ccf2;
   --c-base-bluelight: hwb(199, 1%, 4%);
   --c-base-blue: hwb(209, 0%, 35%);
@@ -517,6 +517,7 @@ a.purple-link {
 .post-info {
   color: var(--c-base-purple);
   font-size: 12px;
+  margin-top: 10px;
 }
 .post-info span {
   margin-right: 16px;
@@ -954,6 +955,10 @@ html.dark .post-item .content .post-title {
 html.dark .post-item .content .post-abstract {
   color: #afafaf;
 }
+html.dark .post-item .post-info,
+html.dark .post-item .post-info a {
+  color: #759eff;
+}
 html.dark .post-detail .post-title {
   color: #c9d1d9;
 }
@@ -996,7 +1001,7 @@ html.dark pre[class*=language-].line-numbers {
 }
 html.dark .highlight .copy-code,
 html.dark pre[class*=language-].line-numbers .copy-code {
-  color: #7e7e7e;
+  color: #a1a1a1;
 }
 html.dark .highlight table tr:hover,
 html.dark pre[class*=language-].line-numbers table tr:hover {
@@ -1009,7 +1014,7 @@ html.dark pre[class*=language-].line-numbers code[class*=language-] {
 }
 html.dark .highlight .link,
 html.dark pre[class*=language-].line-numbers .link {
-  color: #0081f9;
+  color: #3da3ff;
 }
 html.dark .site-header-container {
   background-color: #121212;
@@ -1025,7 +1030,7 @@ html.dark .top-box li a {
 }
 html.dark .top-box li a:hover,
 html.dark .top-box li a.current {
-  color: #006cff !important;
+  color: #5ca2ff !important;
   background: #ddd;
 }
 html.dark .next-post .post-title {
@@ -1064,12 +1069,12 @@ html.dark .gt-container .gt-comment-content {
   background-color: #000;
 }
 html.dark .gt-container .gt-svg svg {
-  fill: #6190e8;
+  fill: #78a1ed;
 }
 html.dark .highlight .tag,
 html.dark .highlight .name,
 html.dark .highlight .attribute {
-  color: #2d22dd;
+  color: #8f8bf3;
 }
 html.dark .highlight .deletion {
   color: #ffdcd7;
