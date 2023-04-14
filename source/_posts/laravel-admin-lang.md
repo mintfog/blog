@@ -8,7 +8,7 @@ tags:
 - laravel
 - 代码速记
 categories: 代码速记
-updated: 2023-03-20
+updated: 2023-04-14
 ---
 
 ## 背景
@@ -19,7 +19,9 @@ laravel 的本地化功能提供了一种方便的方法来检索各种语言的
 
 ## 代码部分
 
-`app\Admin\Middleware\SwitchLanguage.php` 
+### `SwitchLanguage.php`
+
+新建 `app\Admin\Middleware\SwitchLanguage.php` 文件
 
 ```php
 <?php
@@ -53,7 +55,10 @@ class SwitchLanguage
         }
         App::setLocale($cookie_language);
 
-        $controller_name = get_class($request->route()->controller);
+        $controller = $request->route()->controller;
+        if (!$controller) {
+            return $next($request);
+        }
 
         if (strtolower(substr($controller_name, -10)) === 'controller' and Str::startsWith($controller_name, 'App\\Admin\\Controllers\\')) {
             $controller_name = str_replace('App\\Admin\\Controllers\\', '', $controller_name);
@@ -66,7 +71,114 @@ class SwitchLanguage
 }
 ```
 
-`config/admin.php` 新增如下配置：
+### `LanguageMenu.php`
+
+新建 `app/Admin/Widgets/LanguageMenu.php` 文件
+
+```php
+<?php
+
+
+namespace App\Admin\Widgets;
+
+use Illuminate\Contracts\Support\Renderable;
+use Illuminate\Support\Facades\Cookie;
+
+class LanguageMenu implements Renderable
+{
+
+    public function render()
+    {
+        $multi_language = config('admin.multi_language');
+        $languages = $multi_language['languages'];
+        $current = $multi_language['default'];
+        $cookie_name = $multi_language['cookie_name'];
+        if(Cookie::has($cookie_name)) {
+            $cookie_current = Cookie::get($cookie_name);
+            if (array_key_exists($cookie_current, $languages)) {
+                $current = $cookie_current;
+            }
+        }
+        return view('admin.widgets.lang_menu', compact('languages', 'current', 'cookie_name'))->render();
+    }
+}
+```
+
+### `lang_menu.blade.php`
+
+新建 `resources/views/admin/widgets/lang_menu.blade.php` 文件
+
+```html
+<li class="dropdown messages-menu">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <i class="fa fa-language"></i>
+    </a>
+    <ul class="dropdown-menu" style="height: 83px;">
+        <li>
+            <ul class="menu">
+
+                @foreach($languages as $key => $language)
+                    <li>
+                        <a class="language" href="#" data-id="{{$key}}">
+                            {{$language}}
+                            @if($key == $current)
+                                <i class="fa fa-check pull-right"></i>
+                            @endif
+                        </a>
+                    </li>
+                @endforeach
+            </ul>
+        </li>
+    </ul>
+</li>
+<script>
+    $(function () {
+        $(".language").click(function () {
+            let id = $(this).data('id');
+            // 请求
+            $.ajax({
+                url: '{{ route('admin.setLocation') }}',
+                type: 'POST',
+                data: {
+                    _token: LA.token,
+                    location: id
+                },
+                success: function (data) {
+                    location.reload();
+                }
+            });
+        });
+    });
+</script>
+```
+
+### `bootstrap.php`
+
+在 `app/Admin/bootstrap.php` 新增如下代码：
+
+```php
+Admin::navbar(function (\Encore\Admin\Widgets\Navbar $navbar) {
+    $navbar->right(new \App\Admin\Widgets\LanguageMenu());
+});
+```
+
+### `routes.php`
+
+在 `app/Admin/routes.php` 中新增路由：
+
+```php
+$router->post('setLocation', function () {
+    $cookie_name = config('admin.multi_language.cookie_name');
+
+    $location = request()->input('location');
+    $cookie = cookie($cookie_name, $location, 60 * 24 * 365);
+    return response()->json(['status' => true,])->withCookie($cookie);
+})->name('setLocation');
+```
+
+### `admin.php`
+
+在 `config/admin.php` 新增如下配置：
 
 ```php
 'multi_language' => [
@@ -75,7 +187,7 @@ class SwitchLanguage
     // 支持的语言
     'languages' => [
         'en' => 'English',
-        'zh_CN' => '简体中文',
+        'zh-CN' => '简体中文',
     ],
     // 默认语言
     'default' => 'zh-CN',
@@ -84,7 +196,7 @@ class SwitchLanguage
 ],
 ```
 
-然后在 `config/admin.php` 中添加该中间件：
+最后在 `config/admin.php` 中添加该中间件：
 
 ```diff
 'route' => [
@@ -105,6 +217,10 @@ class SwitchLanguage
 
 
 注意：如果翻译键值与公共翻译处冲突，则以单独的翻译文件为准。
+
+## 效果
+
+![效果预览](https://cdn.codeover.cn/img/625c27fe239250f7c5684121.png-imageFop)
 
 <br>
 
