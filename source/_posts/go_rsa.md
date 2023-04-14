@@ -4,8 +4,8 @@ date: 2023-02-21 22:21:03
 keywords: golang,Go语言,RSA,加密,解密,验签,签名,非对称加密,密码学,证书生成,RSA私钥生成,php,php rsa
 summary:  RSA 加密演算法是一种非对称加密演算法，在一些项目中经常使用，在 golang 中 RSA 的加密、解密、签名与验签主要使用 crypto/x509 和 crypto/rsa 两个包中的方法。
 tags:
-- Go
-categories: Go
+- GoLang
+categories: GoLang
 ---
 
 RSA 加密演算法是一种非对称加密演算法[^1]，在一些项目中经常使用，是目前使用最广的数据安全加密算法之一。在 golang 中， RSA 的加密、解密、签名与验签主要使用 `crypto/x509` 和 `crypto/rsa` 两个包中的方法。

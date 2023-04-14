@@ -5,8 +5,8 @@ keywords: golang,basic types,基本类型,数据类型,Go语言
 summary:  Go语言中有丰富的数据类型，除了基本的整型、浮点型、布尔型、字符串外，还有数组、切片、结构体、函数、map、通道（channel）等。Go 语言的基本类型和其他语言大同小异。
 description: Go语言内置布尔、字符串、整数、字节、Unicode、浮点、复数等基本类型。变量申明时没有显式赋初始值，则默认是“零”。
 tags:
-- Go
-categories: Go
+- GoLang
+categories: GoLang
 updated: 2023-02-13
 ---
 
