@@ -29,8 +29,6 @@ jobs:
           node-version: 16
       - name: Build
         run: |
-#          git clone https://github.com/f-dong/hexo-theme-minimalism.git themes/hexo-theme-minimalism
-#          mv -f theme_config.yml themes/hexo-theme-minimalism/_config.yml
           npm install
           npm run build
       - name: Deploy
