@@ -38,10 +38,10 @@ showFeatureImage: true
 avatar: /images/avatar.png
 
 # 谷歌统计 跟踪 ID
-ga: "G-2GM6102E19"
+ga: ""
 
 # 百度统计 The baidu web analytics
-baidu_tongji:
+baidu_tongji: "1634f217ef6dcf0fbd06b3ad984296b1"
 
 # Gittalk 评论组件
 # See: https://github.com/gitalk/gitalk/
