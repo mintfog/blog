@@ -8,7 +8,7 @@ tags: 代码速记
 categories: 代码速记
 ---
 
-
+使用 wkhtmltoimage 生成多字体文本图片
 
 ## 背景
 
@@ -25,7 +25,7 @@ App 端显示的文字实际上是一张图片，类似这样
 
 ## 遇到的问题
 
-因为项目后端主要语言是 PHP，计划使用 PHP 调用 `wkhtmltoimage` ，在 PHP 中也恰好有对应 [扩展](https://www.php.net/manual/zh/book.wkhtmltox.php)，但最终实施时发现会出现重影，于是不得不放弃了这一方案（直接使用 PHP 调用命令也可以，但是需要使用 `proc_open` 等函数执行，会对生产环境的安全造成威胁），因为项目中有使用 Python，所以最终决定将此功能放于 Python处理
+因为项目后端主要语言是 PHP，计划使用 PHP 调用 `wkhtmltoimage` ，在 PHP 中也恰好有对应 [wkhtmltox 扩展](https://www.php.net/manual/zh/book.wkhtmltox.php)，但最终实施时发现在生成纯透明背景图片时会出现重影（背景非透明就无此问题），于是不得不放弃了这一方案（直接使用 PHP 调用命令也可以，但是需要使用 `proc_open` 等函数执行，会对生产环境的安全造成威胁），因为项目中有使用 Python，所以最终决定将此功能放于 Python处理
 
 ## 完整代码
 
