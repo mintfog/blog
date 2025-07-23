@@ -86,3 +86,13 @@ cdn:
   enable: false
   # CDN 提供者
   provider: jsdelivr # 可选 jsdelivr、unpkg、bootcdn
+
+search:
+  enable: true # 是否启用搜索
+  type: algolia   # 可选：json 或 algolia
+  placeholder: 输入关键词搜索...
+  algolia:
+    appID: 'DJHCMD8JFW'
+    apiKey: 'ece71a6c6a50f564c8791afe35c9d2d7'
+    indexName: 'codeover_cn_djhcmd8jfw_pages'
+
