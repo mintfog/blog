@@ -9,7 +9,7 @@ tags:
 - Codex
 - API
 categories: AI
-updated: 2026-08-04 12:06:00
+updated: 2026-08-10 16:16:22
 ---
 
 如果你想在 Codex App 或 Codex CLI 中使用 GPT 模型，Codex API 中转站通常会提供统一的 API 地址和按量计费服务。各平台的使用方法大同小异，真正需要对比的是 Plus、Pro 等号池的充值价格、消耗倍率，以及两者相乘后的实际综合倍率。
@@ -97,11 +97,13 @@ updated: 2026-08-04 12:06:00
 
 **注册入口：** [点击注册 ooioo.work](https://ooioo.work/sign-up?aff=EL7Q)
 
+> **平台说明：** ooioo.work 是二道贩子，服务有时不稳定，请谨慎选择。
+
 当前价格倍率：
 
 | 分组 | 价格倍率 | 备注 |
 | --- | ---: | --- |
-| Plus | 0.08x | 价格较低，但偶尔不稳定 |
+| Plus | 0.08x | 价格较低 |
 | Pro | 0.2x | — |
 
 ### 4. Krill AI
