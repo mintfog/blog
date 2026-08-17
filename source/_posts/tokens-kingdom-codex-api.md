@@ -2,14 +2,14 @@
 title: Codex API 中转站价格与倍率汇总：Plus 与 Pro
 date: 2026-08-04 10:57:00
 summary: 持续汇总 Codex GPT API 中转站的注册入口、Plus 与 Pro 价格、充值比例和消耗倍率，并提供通用的 Codex 配置流程。
-keywords: Tokens Kingdom, 77code, ooioo, Krill AI, AIHub, Codex 中转站, GPT 中转站, Codex API, GPT API, Plus, Pro, 中转站倍率
+keywords: 吉吉 AI, Tokens Kingdom, 77code, ooioo, Krill AI, AIHub, Codex 中转站, GPT 中转站, Codex API, GPT API, Plus, Pro, 中转站倍率
 description: 本文持续整理 Codex GPT API 中转站的 Plus 与 Pro 价格，结合充值比例和消耗倍率计算实际成本，并介绍通用的 Codex API Key 配置方法。
 tags:
 - AI
 - Codex
 - API
 categories: AI
-updated: 2026-08-17 00:00:00
+updated: 2026-08-18 00:00:00
 ---
 
 如果你想在 Codex App 或 Codex CLI 中使用 GPT 模型，Codex API 中转站通常会提供统一的 API 地址和按量计费服务。各平台的使用方法大同小异，真正需要对比的是 Plus、Pro 等号池的充值价格、消耗倍率，以及两者相乘后的实际综合倍率。
@@ -46,69 +46,21 @@ updated: 2026-08-17 00:00:00
 
 ## 中转站价格汇总
 
-以下价格与倍率最初整理于 2026 年 8 月 4 日，Krill AI 信息更新于 2026 年 8 月 17 日。平台可能随时调整商品价格、模型分组或倍率，请在充值前再次核对。
+以下价格与倍率最初整理于 2026 年 8 月 4 日，吉吉 AI 信息更新于 2026 年 8 月 18 日，Krill AI 信息更新于 2026 年 8 月 17 日。平台可能随时调整商品价格、模型分组或倍率，请在充值前再次核对。
 
-### 1. Tokens Kingdom
+### 1. 吉吉 AI
 
-**注册入口：** [点击注册 Tokens Kingdom](https://tokenskingdom.com/register?aff=Y2QY8LVEKRWU)
+**注册入口：** [点击注册吉吉 AI](https://www.jiji.cc/register?aff=RR5456PFFY8D)
 
-**充值入口：**
+吉吉 AI 的服务比较稳定，当前价格如下：
 
-- [USDT 支付](https://buy.tokenskingdom.com/)：免手续费
-- [链动购买](https://pay.ldxp.cn/shop/xiaoba)
-
-充值价格：
-
-| 到账额度 | 实付金额 | 充值系数 |
-| ---: | ---: | ---: |
-| 100 美金额度 | 7 元 | 0.07000 |
-| 520 美金额度 | 36 元 | 0.06923 |
-| 2088 美金额度 | 145 元 | 0.06944 |
-| 7088 美金额度 | 490 元 | 0.06913 |
-| 14500 美金额度 | 999 元 | 0.06890 |
-
-不同面额的充值系数约为 `0.0689–0.07`。结合“API 密钥 → 创建密钥 → 分组”中显示的消耗倍率，实际价格如下：
-
-| 分组 | 消耗倍率 | 综合倍率 |
-| --- | ---: | ---: |
-| Image-2 | 1x | 0.0689–0.0700 |
-| Pro帝 | 4x | 0.2756–0.2800 |
-| Plus/Pro 无极 | 2.3x | 0.1585–0.1610 |
-| Kiro 高缓存 | 0.8x | 0.0551–0.0560 |
-| Plus 吕布 | 1.6x | 0.1102–0.1120 |
-| Plus 赵云 | 1.2x | 0.0827–0.0840 |
-| Team/plus 典韦 | 0.9x | 0.0620–0.0630 |
-| Grok 4.5 | 0.4x | 0.0276–0.0280 |
-| Plus 无双 | 1x | 0.0689–0.0700 |
-| CC Max | 17x | 1.1712–1.1900 |
-
-### 2. 77code
-
-**注册入口：** [点击注册 77code](https://doce.77code.fun/sign-up?aff=EtkG)
-
-**充值入口：** [链动购买兑换码](https://pay.ldxp.cn/shop/56JSQ9GE)
-
-77code 当前充值与到账为 1:1，例如支付 10 到账 10，因此充值系数为 `1`：
-
-| 分组 | 消耗倍率 | 综合倍率 |
-| --- | ---: | ---: |
-| Plus | 0.1x | 0.1000 |
-| Pro | 0.15x | 0.1500 |
-
-### 3. ooioo.work
-
-**注册入口：** [点击注册 ooioo.work](https://ooioo.work/sign-up?aff=EL7Q)
-
-> **平台说明：** ooioo.work 是二道贩子，服务有时不稳定，请谨慎选择。
-
-当前价格倍率：
-
-| 分组 | 价格倍率 | 备注 |
+| 服务 | 价格或倍率 | 备注 |
 | --- | ---: | --- |
-| Plus | 0.08x | 价格较低 |
+| Plus | 0.1x | — |
 | Pro | 0.2x | — |
+| GPT 画图 | 0.1 元/张 | 按张计费 |
 
-### 4. Krill AI
+### 2. Krill AI
 
 **注册入口：** [点击注册 Krill AI](https://www.krill-ai.net/register?invite=QP0I5CMRU2)
 
@@ -137,7 +89,7 @@ updated: 2026-08-17 00:00:00
 
 ~~该平台的月卡通常会有 8 折活动，因此常见实际综合倍率约为 `0.12`，如果叠加其他优惠还可能更低。活动力度并非固定，最终以付款页面的实际价格为准。~~
 
-### 5. AIHub
+### 3. AIHub
 
 **注册入口：** [点击注册 AIHub](https://aihub.dog/register?aff=3ZYP2EF5XKVQ)
 
@@ -152,6 +104,76 @@ AIHub 汇集了多个供货商，同一模型在不同供货商下的价格可�
 ![AIHub 多供货商渠道与价格截图一](https://cdn.codeover.cn/img/2026/ScreenShot_2026-08-13_143944_464.png-imageFop)
 
 ![AIHub 多供货商渠道与价格截图二](https://cdn.codeover.cn/img/2026/ScreenShot_2026-08-13_144059_265.png-imageFop)
+
+### 4. Tokens Kingdom
+
+**注册入口：** [点击注册 Tokens Kingdom](https://tokenskingdom.com/register?aff=Y2QY8LVEKRWU)
+
+**充值入口：**
+
+- [USDT 支付](https://buy.tokenskingdom.com/)：免手续费
+- [链动购买](https://pay.ldxp.cn/shop/xiaoba)
+
+充值价格：
+
+| 到账额度 | 实付金额 | 充值系数 |
+| ---: | ---: | ---: |
+| 100 美金额度 | 7 元 | 0.07000 |
+| 520 美金额度 | 36 元 | 0.06923 |
+| 2088 美金额度 | 145 元 | 0.06944 |
+| 7088 美金额度 | 490 元 | 0.06913 |
+| 14500 美金额度 | 999 元 | 0.06890 |
+
+不同面额的充值系数约为 `0.0689–0.07`。结合“API 密钥 → 创建密钥 → 分组”中显示的消耗倍率，实际价格如下：
+
+| 分组 | 消耗倍率 | 综合倍率 |
+| --- | ---: | ---: |
+| Image-2 | 1x | 0.0245 元/张 |
+| Pro帝 | 4x | 0.2756–0.2800 |
+| Plus/Pro 无极 | 2.3x | 0.1585–0.1610 |
+| Kiro 高缓存 | 0.8x | 0.0551–0.0560 |
+| Plus 吕布 | 1.6x | 0.1102–0.1120 |
+| Plus 赵云 | 1.2x | 0.0827–0.0840 |
+| Team/plus 典韦 | 0.9x | 0.0620–0.0630 |
+| Grok 4.5 | 0.4x | 0.0276–0.0280 |
+| Plus 无双 | 1x | 0.0689–0.0700 |
+| CC Max | 17x | 1.1712–1.1900 |
+
+> **稳定性说明：** 除了价格较高的 Pro 档位，其余便宜档位在日常使用中普遍不太稳定，重要任务建议准备备用渠道。
+
+该渠道的生图价格较低，站内余额按 `0.35 美金额度/张`扣除。以实付 7 元到账 100 美金额度计算：
+
+```text
+实际单张价格 = 0.35 × (7 ÷ 100) = 0.0245 元/张
+```
+
+也就是实际约 `2.45 分/张`。
+
+### 5. 77code
+
+**注册入口：** [点击注册 77code](https://doce.77code.fun/sign-up?aff=EtkG)
+
+**充值入口：** [链动购买兑换码](https://pay.ldxp.cn/shop/56JSQ9GE)
+
+77code 当前充值与到账为 1:1，例如支付 10 到账 10，因此充值系数为 `1`：
+
+| 分组 | 消耗倍率 | 综合倍率 |
+| --- | ---: | ---: |
+| Plus | 0.1x | 0.1000 |
+| Pro | 0.15x | 0.1500 |
+
+### 6. ooioo.work
+
+**注册入口：** [点击注册 ooioo.work](https://ooioo.work/sign-up?aff=EL7Q)
+
+> **平台说明：** ooioo.work 是二道贩子，服务有时不稳定，请谨慎选择。
+
+当前价格倍率：
+
+| 分组 | 价格倍率 | 备注 |
+| --- | ---: | --- |
+| Plus | 0.08x | 价格较低 |
+| Pro | 0.2x | — |
 
 ## 使用流程
 
