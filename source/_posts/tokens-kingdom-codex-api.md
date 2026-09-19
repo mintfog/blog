@@ -1,20 +1,35 @@
 ---
 title: Codex API 中转站价格与倍率汇总：Plus 与 Pro
 date: 2026-08-04 10:57:00
-summary: 持续汇总 Codex GPT API 中转站的注册入口、Plus 与 Pro 价格、充值比例和消耗倍率，并提供通用的 Codex 配置流程。
-keywords: 吉吉 AI, Tokens Kingdom, 77code, ooioo, Krill AI, AIHub, Codex 中转站, GPT 中转站, Codex API, GPT API, Plus, Pro, 中转站倍率
-description: 本文持续整理 Codex GPT API 中转站的 Plus 与 Pro 价格，结合充值比例和消耗倍率计算实际成本，并介绍通用的 Codex API Key 配置方法。
+summary: 持续汇总 Codex GPT API 中转站的注册入口、Plus 与 Pro 价格、充值比例和消耗倍率，提供通用的 Codex 配置流程，并附 ChatGPT Plus / Pro 官方订阅代充价格、Pro 20x 停售说明与售后条款。
+keywords: 吉吉 AI, Tokens Kingdom, 77code, ooioo, Krill AI, AIHub, Codex 中转站, GPT 中转站, Codex API, GPT API, Plus, Pro, 中转站倍率, ChatGPT Plus 代充, ChatGPT Pro 代充, ChatGPT 官方订阅代充, Plus 135元, Pro 5x 850元, Pro 20x 官方停售, 海外实体信用卡代付
+description: 汇总 Codex GPT API 中转站的 Plus 与 Pro 价格、充值比例、消耗倍率及配置方法。另提供 ChatGPT 官方订阅代充：Plus 135 元、Pro 5x 850 元，使用正规海外实体信用卡支付；Pro 20x 当前官方已停售，无法开通。订阅保障与封号退款条件详见正文。
 tags:
 - AI
 - Codex
 - API
 categories: AI
-updated: 2026-08-18 00:00:00
+updated: 2026-09-20 00:30:00
 ---
 
 如果你想在 Codex App 或 Codex CLI 中使用 GPT 模型，Codex API 中转站通常会提供统一的 API 地址和按量计费服务。各平台的使用方法大同小异，真正需要对比的是 Plus、Pro 等号池的充值价格、消耗倍率，以及两者相乘后的实际综合倍率。
 
 每个平台只记录入口和价格，注册、充值、创建 API Key 与配置 Codex 的公共流程统一放在后面。
+
+## 广告：ChatGPT Plus / Pro 官方订阅代充
+
+本人提供 ChatGPT Plus / Pro 官方订阅代充服务，使用**正规海外实体信用卡**，通过官方订阅渠道完成支付。
+
+| 订阅套餐 | 代充价格（人民币） |
+| --- | ---: |
+| Plus | 135 元 |
+| Pro 5x | 850 元 |
+| Pro 20x（官方已停售，当前无法开通） | ~~1300 元~~ |
+
+- **订阅保障：** 保订阅，订阅期间如遇订阅异常，可联系我处理。
+- **封号退款：** 若账号被封，且官方退回了该笔订阅费用，我会在收到官方退款后为你退款。
+
+有需要可通过[关于页面中的联系方式](/about/#联系我)联系我，咨询套餐与代充事宜。
 
 ## 怎么计算真实倍率
 
